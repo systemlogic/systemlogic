@@ -12,7 +12,7 @@
         </td>
         <td></td>
         <td align="left" bordercolor="c41200">
-        	<h2>Core Container</h2>
+        	<h2>Core Container </h2>
         	<p><b>Core : </b> is the core implementation of framework using Inversion of Control aka IoC which is also coined the term Dependency Injuction.</p>
         	<p><b>Inversion of Control : </b> Inversion of control means now we have inverted the control of creating the object from our own using new operator to container or 
         	framework. Now it's the responsibility of container to create object as required. We maintain one xml file OR annotation where we configure our components, services, all the 
@@ -188,10 +188,8 @@ public class HelloWord {
 		&lt;/dependency&gt;
 
 	&lt;/dependencies&gt;	
-&lt;/project&gt;
-
-</pre>
-        </td>
+&lt;/project&gt;</pre>
+<p><a href='https://github.com/systemlogic/springhelloworld/archive/master.zip'><span>Download this Example
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
