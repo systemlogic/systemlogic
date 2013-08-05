@@ -12,6 +12,11 @@ public class CoreContainer {
 		return "springCoreContainer";
  
 	}
+	
+	@RequestMapping(value = "/springContext", method = RequestMethod.GET)
+	public String getspringContext(ModelMap model) {
+		return "springContext";
  
+	} 
 }
 
