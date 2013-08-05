@@ -189,7 +189,8 @@ public class HelloWord {
 
 	&lt;/dependencies&gt;	
 &lt;/project&gt;</pre>
-<p><a href='https://github.com/systemlogic/springhelloworld/archive/master.zip'><span>Download this Example
+<p><a href='https://github.com/systemlogic/springhelloworld/archive/master.zip'><span>Download this Example</span></a></p>
+   </td>
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>

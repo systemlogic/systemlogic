@@ -10,13 +10,14 @@ public class CoreContainer {
 	@RequestMapping(value = "/springCoreContainer", method = RequestMethod.GET)
 	public String getspringCorecontainer(ModelMap model) {
 		return "springCoreContainer";
- 
 	}
-	
 	@RequestMapping(value = "/springContext", method = RequestMethod.GET)
 	public String getspringContext(ModelMap model) {
 		return "springContext";
- 
-	} 
+	}
+	@RequestMapping(value = "/springEL", method = RequestMethod.GET)
+	public String getspringEL(ModelMap model) {
+		return "springEL";
+	}
 }
 
