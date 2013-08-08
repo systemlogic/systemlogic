@@ -30,6 +30,10 @@ public class CoreContainer {
 	@RequestMapping(value = "/springDataAccess", method = RequestMethod.GET)
 	public String getspringDataAccess(ModelMap model) {
 		return "springDataAccess";
+	}@RequestMapping(value = "/springWebREST", method = RequestMethod.GET)
+	public String getspringWebREST(ModelMap model) {
+		return "springWebREST";
 	}
+	
 }
 
