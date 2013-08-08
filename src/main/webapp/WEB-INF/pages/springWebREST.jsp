@@ -33,6 +33,7 @@
 					<tr><td>/emp/{id}</td><td>Delete</td><td>Delete the employee information identified by id</td></tr>
 				</table>
 				<p> <b>Base URL :</b> http://restapp.systemlogic.cloudbees.net</p>
+				<p><a href='https://github.com/systemlogic/RestApp/archive/master.zip'><span>Download this Example</span></a></p>
 		</td>
 				<%@ include file="rightPane.jsp" %>
 		</tr>
