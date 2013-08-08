@@ -39,7 +39,7 @@
 				</div>
 				<div class="column"  style="width: 150px; text-align: center;">
 					<a href='/spring/springCoreContainer'>Core container</a> 
-					<a href='#'>Data Access/Integration</a>
+					<a href='/spring/springDataAccess'>Data Access/Integration</a>
 					<a href='#'>Web</a> 
 					<a href='#'>AOP and Instrumentation</a> 
 					<a href='#'>Test</a> 

@@ -27,5 +27,9 @@ public class CoreContainer {
 	public String getspringExamples(ModelMap model) {
 		return "springExamples";
 	}
+	@RequestMapping(value = "/springDataAccess", method = RequestMethod.GET)
+	public String getspringDataAccess(ModelMap model) {
+		return "springDataAccess";
+	}
 }
 
