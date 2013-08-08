@@ -43,6 +43,7 @@
 					<a href='#'>Web</a> 
 					<a href='#'>AOP and Instrumentation</a> 
 					<a href='#'>Test</a> 
+					<a href='/spring/springExamples'>Examples</a> 
 
 				</div>
 				<div class="column" style="width: 200px; text-align: center;">

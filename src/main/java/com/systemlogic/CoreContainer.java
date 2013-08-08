@@ -19,5 +19,13 @@ public class CoreContainer {
 	public String getspringEL(ModelMap model) {
 		return "springEL";
 	}
+	@RequestMapping(value = "/springAutoWire", method = RequestMethod.GET)
+	public String getspringAutoWire(ModelMap model) {
+		return "springAutoWire";
+	}
+	@RequestMapping(value = "/springExamples", method = RequestMethod.GET)
+	public String getspringExamples(ModelMap model) {
+		return "springExamples";
+	}
 }
 
