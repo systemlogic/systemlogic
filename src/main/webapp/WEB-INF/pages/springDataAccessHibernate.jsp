@@ -12,15 +12,11 @@
         </td>
         <td></td>
         <td align="left" bordercolor="c41200">
-        	<h2>Data Access</h2>
-        	<p>Spring offers JDBC, ORM, OXM, JMS and Transaction modules to play with persistent data. We will see each one 
-        	with some example.</p>
-        	<p><b>JDBC : </b> Using jdbc template for all database operation.</p>
-        	<p><b>Object Relational Mapping aka ORM : </b> best for JPA, Hibernate.</p>
-        	<p><b>Object/XML mapping aka OXM :</b></p>
-        	<p><b>Java Messanging Service :</b></p>
-        	<p><b>Transaction :</b></p>
-        	</td>
+        	<h2>Object Relational Mapping</h2>
+        	<p>Object-Relational Mapping APIs, including JPA, JDO, Hibernate, and iBatis. We will disscuss about 
+        	Hibernate only and that is even in Hibernate framework.</p>
+        </td>
+        
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
