@@ -124,7 +124,7 @@ public class App {
 }
  </pre>
  <p>To understand the class structure please download the source code from below.</p>
- <p><a href='https://github.com/systemlogic/MarshellUnMarshell.git'><span>Download this Example</span></a></p>
+ <p><a href='https://github.com/systemlogic/MarshellUnMarshell/archive/master.zip'><span>Download this Example</span></a></p>
         </td>
         
         <%@ include file="rightPane.jsp" %>
