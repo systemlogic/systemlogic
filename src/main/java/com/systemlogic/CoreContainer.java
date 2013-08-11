@@ -39,6 +39,9 @@ public class CoreContainer {
 	}@RequestMapping(value = "/springDataAccessHibernate", method = RequestMethod.GET)
 	public String getspringDataAccessHibernate(ModelMap model) {
 		return "springDataAccessHibernate";
+	}@RequestMapping(value = "/springDataAccessOXM", method = RequestMethod.GET)
+	public String getspringDataAccessOXM(ModelMap model) {
+		return "springDataAccessOXM";
 	}
 	
 }

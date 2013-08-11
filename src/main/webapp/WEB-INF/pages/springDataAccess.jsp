@@ -17,7 +17,7 @@
         	with some example.</p>
         	<p><b>JDBC : </b> Using jdbc template for all database operation.</p>
         	<p><b>Object Relational Mapping aka ORM : </b> best for JPA, Hibernate.</p>
-        	<p><b>Object/XML mapping aka OXM :</b></p>
+        	<p><b>Object/XML mapping aka OXM :</b> jaxb2-marshaller, xmlbeans-marshaller, jibx-marshaller</p>
         	<p><b>Java Messanging Service :</b></p>
         	<p><b>Transaction :</b></p>
         	</td>
