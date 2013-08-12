@@ -148,6 +148,10 @@ xjc -p com.bank.account -d account.xsd
 </pre>
 <p>xjc is utility provided by JDK at javac level and it should be in path before executing. So, is this piece of code enough to write the classes? <b>Yes</b>. 
 Please dig into the folder, some java classes might be created with proper package structure if no error is thrown. Explore the java class file.</p>
+
+<p><a href='https://github.com/systemlogic/xjc/archive/master.zip'><span>Download this Example</span></a></p>
+
+
 	    </td>
         <%@ include file="rightPane.jsp" %>
     </tr>
