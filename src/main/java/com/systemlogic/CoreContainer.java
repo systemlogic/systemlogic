@@ -42,6 +42,12 @@ public class CoreContainer {
 	}@RequestMapping(value = "/springDataAccessOXM", method = RequestMethod.GET)
 	public String getspringDataAccessOXM(ModelMap model) {
 		return "springDataAccessOXM";
+	}@RequestMapping(value = "/springWebservlet", method = RequestMethod.GET)
+	public String getspringWebservlet(ModelMap model) {
+		return "springWebservlet";
+	}@RequestMapping(value = "/springWeb", method = RequestMethod.GET)
+	public String getspringWeb(ModelMap model) {
+		return "springWeb";
 	}
 	
 }
