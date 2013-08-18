@@ -19,7 +19,7 @@
 		<p>HashMap choice over other map classes is, it provide efficient access to the element for the same we need to define 
 efficient hashCode() implementation. It is always the key object hashCode which used for efficient access, Doesn't matter how efficient 
 the hashCode of Value Object</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -57,7 +57,7 @@ class HASHMAP{
 //[KEY={3 Tiger are in Jungle. Hashcode bucket # 8} Value=Tiger]
 </pre>
 <p>Lets give some definition to equals method and check the Output. 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -100,7 +100,7 @@ class HASHMAP{
 <h3>HashTable</h3>
 <p>HashTable is differ from HashMap by it doesn't accept null as key and its methods are synchronized.Synchronization
 we will learn later. For Now check the output for below code</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -133,7 +133,7 @@ efficient access.</p>
 <h3>TreeMap</h3>
 <p>TreeMap is a sorted Map and sorted by the natural order of the elements  using Red-Black Tree. We will see TreeMap with accepting Class Object key.
  Time Complexity of any operation is O(log n)</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	

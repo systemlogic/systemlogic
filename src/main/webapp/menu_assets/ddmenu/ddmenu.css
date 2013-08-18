@@ -3,6 +3,15 @@
 
 /* main menu
 ----------------------------*/
+.preS{ 
+background-color:F0F7FE; 
+border: 1px solid #CCCCCC; 
+display: block; 
+margin: 12px 10px; 
+padding: 12px 10px 16px; 
+overflow-x: auto;
+}
+
 #ddmenu
 {
     display:block;

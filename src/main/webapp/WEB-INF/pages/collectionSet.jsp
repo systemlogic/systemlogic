@@ -18,7 +18,7 @@
         	function have been shown below. </p>
         	
 		<h3>HashSet</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 public class HashSet<E>{
 public HashSet() {
         map = new HashMap<>();
@@ -33,7 +33,7 @@ public boolean add(E e) {
 <p>A HashSet is an unsorted, unordered Set. Why? Any Object that is put into the Set is stored according to the hashcode value of the object and goes into 
 appropriate hashcode bucket. Two different object can have same hash code and go to same bucket which improves better access performance. Lets start with example 
 of set storing primitive type.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class HASHSET{
 	public static void main(String...strings){
 		HashSet< String > hs = new HashSet< String >();
@@ -55,7 +55,7 @@ class HASHSET{
 }</pre>
 <p>Checkout the console output for set order which is not same as insertion order. Hash code value has been printed to show what bucket it belongs to.
 String object with value "Dog" is inserted only once. Let see HashSet Example with Animal Class object.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -98,7 +98,7 @@ class HASHSET{
 </pre>
 <p>Above example will print all object as default equals() method of Animal compare Object refernce which won't be same even if hashCode value is same. 
 Object belong to same bucket link to each other using list. Let us give definition to equals method of Animal class.</p> 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -156,7 +156,7 @@ Red-Black Tree. So why we don't need equal() implementation with TreeSet? Whenev
 Comparing the values define in comparator Interface implementation. Equal method of premitive type( int, fload, String) will be call to compare 
 the values rather to call equals() method of Class whose object need to be sorted. So if Node with value already present at location in RB-Tree 
 then it won't be inserted. Time Complexity of any operation is O(log n).Example will explain how Objects of class are sorted using Comparator interface.
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Animal {
 	int count ;
 	String name;	
@@ -198,7 +198,7 @@ class TREESET{
 }
 </pre>
 <p>TreeSet contain extra function for searching an object. Checkout the output for below code</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class searchingSet{
 	public static void main(String...strings){
 		TreeSet<Animal> hs = new TreeSet<Animal>(new AnimalComparator());

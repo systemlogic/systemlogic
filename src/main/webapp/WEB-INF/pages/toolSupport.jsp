@@ -15,13 +15,13 @@
         	<h2>Eclipse/RAD Support</h2>
         	<p>For those who are comfertable with terminal command and want to switch over to GUI development. 
         	Easy for them to add Eclipse/RAD support to java project created using maven. Just get into the project directory and run the command.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 mvn eclipse:eclipse
 mvn eclipse:rad
 </pre>
 <p>At this point project can be imported to elipse.</p>        	    
 <p>To remove the java support.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 mvn eclipse:clean
 mvn eclipse:rad:clean
 </pre>

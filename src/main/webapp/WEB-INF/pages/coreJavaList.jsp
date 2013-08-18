@@ -16,7 +16,7 @@
         	<p>Linklist is one of the common data structure which is widely used and simple as maintaining element in sequence.</p>
         	<p>We will implement generic Linklist which will accept any type of value at any instance of operation. These values need to maintain in some type of class object which can hold value passed and reference of same type of object</p>
         	<h3>ILinkList.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package linklist;
 public interface ILinkList< E,N > {
 	public void insertAfter(E e,N n);
@@ -26,7 +26,7 @@ public interface ILinkList< E,N > {
 	public E remove(N n);
 }</pre>
 <h3>LinkList.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 /**
  * 
  */
@@ -126,7 +126,7 @@ public class Linklist< E, N > implements ILinkList< E, N > {
 }</pre>
         	<p>In Linklist data can be inserted at any where and can be removed as well from anywhere.</p>
         	<h3>LinklistTest.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 /**
  * 
  */

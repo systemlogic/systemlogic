@@ -16,7 +16,7 @@
 					<b>Spring Expression Language (SpEL) : </b> The Spring Expression Language (SpEL for short) is a 
 					powerful expression language that supports querying and manipulating an object graph at runtime.</p>
 <p>Bean That going to use in xml based Expression Language  and reference bean.
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package com.bean;
 
 public class Address {
@@ -84,7 +84,7 @@ public class Address {
 	}
 }</pre>
 <p>Bean that going to be us with Annotation Expression Language.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package com.bean;
 
 import org.springframework.stereotype.Component;
@@ -156,7 +156,7 @@ public class OfficeAddress {
 }</pre>
 
 <p>UID Bean which will server for both.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package com.bean;
 
 import java.util.Date;
@@ -214,7 +214,7 @@ public class UID {
 	
 }</pre>
 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -277,7 +277,7 @@ public class UID {
 &lt;/beans&gt;</pre>
 
 <p>SpringTest will explain Expression Language for basic type and complex type.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Random;

@@ -14,10 +14,10 @@
         <td align="left" bordercolor="c41200">
         	<h2>Maven</h2>
         	<p>Install Maven on ubuntu</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 sudo apt-get install maven</pre>
 <p>Test whether Maven is installed?</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 mvn -version</pre> 
 <p>Maven installation on Eclipse. Help > Eclipse Market Place</p>
 <img  src="/images/Market-Place-Maven.png">

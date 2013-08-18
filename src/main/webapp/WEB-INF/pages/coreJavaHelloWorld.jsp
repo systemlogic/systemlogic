@@ -15,7 +15,7 @@
         	<h2>Hello World </h2>
         	<p>The biggest challenge to learn any language is to print Hello world. It is so simple to print it on console. One has to open the desire editor and type in the following code</p>
         	<h3>hello.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 public class hello{
 	public static void main(String[] str){
 		System.out.println("Hello World");

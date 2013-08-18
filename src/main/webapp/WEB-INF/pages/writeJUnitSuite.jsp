@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>JUnit Suite</h2>
         	<p>Writing suite is much easier the JUnit Test case.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package JUnitTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -26,7 +26,7 @@ public class AllTests {
 }</pre>
 <p>Test classes included twice to show Test classes should be marked with Suitclasses annotation and should be commo separated.</p>
 <p>Testing it from terminal is same.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 java -cp /media/Harsh/HeliosSDK/work/StackImp/bin:
 /home/arorah1/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar org.junit.runner.JUnitCore JUnitTest.AllTests</pre>
 	    </td>

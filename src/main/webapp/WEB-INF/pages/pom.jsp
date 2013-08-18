@@ -17,7 +17,7 @@
         	contain entries that we defined at the time of project creation and dependent jars. Each jar that we want
         	to use should be marked under dependencies tag with following format. By default Maven add JUnit jar to 
         	Maven-archetype-quickstart type of project.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 < dependencies >
     < dependency >
       < groupId >junit< /groupId >
@@ -28,12 +28,12 @@
 < /dependencies >
 </pre>        	    
 	<p>Above detail will download the junit file with specified version and specified location under .m2 folder of home directory.
-	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+	<pre class="pres">
 ls ~/.m2/repository
 	</pre>
 	<p>Let us add some dependency to pom and see what really happen. At this point local repository doesn't contain jar file that we are going to use.
 	Please check the following directory ls ~/.m2/repository/org/springframework/spring-core. Add the dependency to the pom. pom.xml should look like as shown below.</p>
-	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+	<pre class="pres">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
@@ -67,7 +67,7 @@ ls ~/.m2/repository
 &lt;/project&gt;
 </pre>   	
 <p>Run the mvn compile and see the repository folder. Also observe the console output which is showing downloading status of different jar file.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------

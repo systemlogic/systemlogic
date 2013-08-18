@@ -17,7 +17,7 @@
         	So how one can restrict only single instance of class? Using static keyword. Let us see how it can be done programmatically.</p>
         	
         	<h3>Singleton.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 class Singleton{
 	private static Singleton single = new Singleton();
 	public static Singleton getInstance(){
@@ -27,7 +27,7 @@ class Singleton{
 <p>Aforementioned code is an example of early initialization. Don't you think this code is having some problem? It will create an instance even if one don't requires it in whole program cycle.
 To guard it  we can change class something like.</p>
 <h3>Singleton.java</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Singleton{
 	private static Singleton single = null;
 	public static Singleton getInstance(){
@@ -40,7 +40,7 @@ class Singleton{
 </pre>    
 <p>The above code do well with single process single thread model. However with multiple thread access can cause multiple instance problem. One way to get out from this problem is to mark single final variable but, this will throws and exception when next time initialization happens. So better to go with synchronized block.</p> 	
 <h3>Singleton.java</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Singleton{
 	private static Singleton single = null;
 	public static Singleton getInstance(){
@@ -55,7 +55,7 @@ class Singleton{
 <p>This code will work 100% fine however will cause performance hit. How? Once object got some memory it will wait on synchronized block statement to get in. So how this problem can be guarded.
 </p>        	
 <h3>Singleton.java</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class Singleton{
 	private static Singleton single = null;
 	public static Singleton getInstance(){

@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Thread and Runnable</h2>
         	<p>Thread can be created by extending Thread class or implementing Runnable interface and giving definition to run method.</p> 
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 public class ThreadTest extends Thread {
 		
 		@Override
@@ -39,7 +39,7 @@ public class ThreadTest extends Thread {
        <p>Other then default thread there is only <b>Main Thread</b> that has been started. So how new thread is created. Always remember one has to call <b>start()</b>
        method on thread object to start new thread. </p> 
        <h3>Extending Thread Class</h3>	
-                	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+                	<pre class="pres">
 public class ThreadTest extends Thread {
 		
 		@Override
@@ -62,7 +62,7 @@ public class ThreadTest extends Thread {
 <p>Order of output is not predictable. Let us observe the jvm console now.</p>
 <img src="/images/NewThread.png">
 <h3>Implementing Runnable Interface</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 public class ThreadTest implements Runnable {
 		
 		@Override

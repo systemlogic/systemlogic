@@ -16,12 +16,12 @@
         	<p>Java is providing Stack class library implementation still we will dig into the code and see how it can be implementedStack is based on Last in First Out(LIFO) and all operation is done from one end.</p>
         	We will implement generic stack which will accept any type of single value at any instance of operationThese values need to maintain in some type of class object which can hold value passed and reference of same type of object</p>
         	<h3>T.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package com;
 public interface T {
 }</pre>
 <h3>Node.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package com;
 public class Node implements T {
 	Node node;
@@ -29,7 +29,7 @@ public class Node implements T {
 }</pre>
         	<p>So how stack is implemented. The basic operation that stack can supports is Push an object and pop the top most object. Let us see the implementation.</p>
         	<h3>stk.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package com;
 public interface stk {
 	public void push(Object t);
@@ -37,7 +37,7 @@ public interface stk {
 
 }</pre>
 <h3>STACK.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package com;
 public class STACK implements stk {
 	T top;
@@ -72,7 +72,7 @@ public class STACK implements stk {
 </pre>
         	<p>At this level it is difficult to write JUnit but i am still showing JUnit code as you might be in position to write code in main function. </p>
         	<h3>STACKJunit.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 /**
  * 
  */
@@ -126,7 +126,7 @@ public class STACKJunit {
 </pre>
         	<p>Now let us see how Java stack lib can be used for the same purpose.</p>
         	<h3>StackTest.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package com;
 import java.util.Stack;
 public class StackTest {

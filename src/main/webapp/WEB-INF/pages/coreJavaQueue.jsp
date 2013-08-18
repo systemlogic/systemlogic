@@ -16,7 +16,7 @@
         	<p>Queue is abstract datatype which is based on First-In-First-Out data structure. Where Items are inserted at one end and are removed from other end. These operation are called as Enqueue, and Dequeue.</p>
         	We will implement generic Queue which will accept any type of single value at any instance of operation. These values need to maintain in some type of class object which can hold value passed and reference of same type of object to navigate forward and backward.</p>
         	<h3>IQueue.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package queue;
 public interface IQueue< E > {
 	public void enqueue(E t);
@@ -24,7 +24,7 @@ public interface IQueue< E > {
 }</pre>
         	<p>So how stack is implemented. The basic operation that Queue can supports is Enqueue an object and Dequeue an Object. Let us see the implementation.</p>
         	<h3>Queue.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package queue;
 public class Queue< E > implements IQueue< E > {
 	transient Node< E > first;
@@ -70,7 +70,7 @@ public class Queue< E > implements IQueue< E > {
 </pre>
         	<p>At this level it is difficult to write JUnit but i am still showing JUnit code as you might be in position to write code in main function. </p>
         	<h3>QueueTest.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 package queue;
 
 import static org.junit.Assert.*;

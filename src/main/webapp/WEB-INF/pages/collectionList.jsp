@@ -15,7 +15,7 @@
         	<h2>List</h2>
         	<p>ArrayList, Vector, LinkedList class implement List interface. We will see implementation and time complexity of each.</p>
 		<h3>ArrayList</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 class arrayList{
 	public static void main(String...strings){
 		ArrayList < Integer > al = new ArrayList < Integer > ();
@@ -34,7 +34,7 @@ class arrayList{
 <p>Time Complexity of adding/removing in ArrayList at the end is O(1) where any place other then end is o(n) since all element need to shift by one place.  </p>
 <p>Default size of ArrayList is 10 which will grow by below algoritm according of JDK 1.7 and equal to half of the size of threshold size. Time complexity for 
 below code will be O(n) since it has to shift all element of old array to new array;</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 private void grow(int minCapacity) {
         // overflow-conscious code
         int oldCapacity = elementData.length;
@@ -48,7 +48,7 @@ private void grow(int minCapacity) {
 }</pre>
 <h3>Sorting</h3>
 <p>Sorting element when ArrayList contains only primitive time is very easy.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class arrayList{
 	public static void main(String...strings){
 		ArrayList < Integer > al = new ArrayList < Integer > ();
@@ -63,7 +63,7 @@ class arrayList{
 	}
 }</pre>
 <p>Let see how difficult it is when sorting is required on some Class object.
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class UIDObject{
 	int uid ;
 	String name;	
@@ -109,7 +109,7 @@ class arrayList{
 	}
 }</pre>
 <p>Above example let you sort object of some other class. What about if you want to sort the object of its own class.
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class UIDObject implements Comparable<UIDObject>{
 	int uid ;
 	String name;	
@@ -144,7 +144,7 @@ class UIDObject implements Comparable<UIDObject>{
 <p>Vector is basically same as an ArrayList, but Vector methods are synchronized for adding and removing element. Vector and ArrayList are two classes 
 to implement RandomAccess. Time complexity is same as ArrayList.</p>        	
 <h3>LinkedList</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class linkList{
 	//static int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 	public static void main(String...strings){
@@ -162,7 +162,7 @@ class linkList{
 <p>LinkList in java is maintained using Node which is maintaining element, reference to next and reference to previous node. Time complexity of insertion and 
 removal of element if element location is not known then it is O(n). If location is know then it is O(1) since it is only unlink the internal node and change of
  reference. Traversal of element is expensive operation and take O(n) time. Node Of LinkedList used to maintain the data is something like below.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 private static class Node<E> {
         E item;
         Node< E > next;

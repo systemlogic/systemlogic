@@ -3,7 +3,7 @@ var ddmenuOptions=
 		menuId: "ddmenu",
 		linkIdToMenuHtml: null,
 		effect: "slide",
-		delay: 50,
+		delay: 100,
 		license: "mylicense"
 };
 

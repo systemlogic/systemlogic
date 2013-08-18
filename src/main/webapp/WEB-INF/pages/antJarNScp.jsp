@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Packaging</h2>
         	<p>Every project Need to pack to some appropriate jar/War or some some other type  of suite. Let us pack class in earlier example.</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property file="build.properties" /&gt;
@@ -42,7 +42,7 @@ command to pack the classes.</p>
 
 <h2>Copy</h2>
 <p>Copying the files into jar package to ship with it is leaving for your practice. Here we will see how to copy packed jar file to destination server.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property file="build.properties" /&gt;
