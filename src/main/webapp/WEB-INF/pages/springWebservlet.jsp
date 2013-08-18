@@ -84,7 +84,114 @@ public class CompanyHandler {}</pre>
 <pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package com.common.controller;
 
-import java.sql.Connection;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.common.connection.DeptConnection;
+import com.common.model.Dept;
+import com.common.model.DeptList;
+import com.common.model.Message;
+
+@Controller
+@RequestMapping(value="/dept")
+public class CompanyHandler {
+
+	@Autowired
+	DeptConnection connection;
+
+	@ResponseBody @RequestMapping(method=RequestMethod.GET)
+	public Object getDepts(@RequestParam(value="petId", required=false) Integer petId,
+			HttpServletRequest   request,
+			HttpServletResponse  response) throws Exception{
+		DeptList result = null;
+		
+		try{
+			result = connection.getDepts();
+		}catch(Exception e){
+			Message msg = new Message();
+			msg.setMsg(e.getMessage());
+			return msg;
+		}
+		
+		return result;	
+
+	}
+	
+	@ResponseBody @RequestMapping(value="/{id}",method=RequestMethod.GET)
+	public Object getDept(@PathVariable String id, HttpServletRequest   request,
+			HttpServletResponse  response, ModelMap model) throws Exception{
+		Dept result =null;
+		try{
+			result = connection.getDept(id);
+		}catch(Exception e){
+			Message msg = new Message();
+			msg.setMsg(e.getMessage());
+			return msg;	
+		}
+		return result;
+
+	}
+	@ResponseBody @RequestMapping(value="/{deptid}/{deptDesc}",method=RequestMethod.POST)
+	@Transactional
+	public Message postDept(@PathVariable("deptid") String deptID, @PathVariable String deptDesc,
+			HttpServletRequest   request,
+			HttpServletResponse  response, ModelMap model) throws Exception{
+		Message result = new Message();
+		try{
+			result.setMsg(connection.postDept(deptID, deptDesc));
+		}catch(Exception e){
+			result.setMsg(e.getMessage());	
+		}
+		return result;
+
+	}
+	@ResponseBody @RequestMapping(value="/{deptid}/{deptDesc}",method=RequestMethod.PUT)
+	@Transactional
+	public Message putDept(@PathVariable("deptid") String deptID, @PathVariable String deptDesc,
+			HttpServletRequest   request,
+			HttpServletResponse  response, ModelMap model) throws Exception{
+		Message result = new Message();
+		try{
+			result.setMsg(connection.putDept(deptID, deptDesc));
+		}catch(Exception e){
+			result.setMsg(e.getMessage());	
+		}
+		return result;
+
+	}
+	@ResponseBody @RequestMapping(value="/{id}",method=RequestMethod.DELETE)
+	@Transactional
+	public Message deleteDept(@PathVariable String id, HttpServletRequest   request,
+			HttpServletResponse  response, ModelMap model) throws Exception{
+		Message result = new Message();
+		try{
+			result.setMsg(connection.deleteDept(id));
+		}catch(Exception e){
+			result.setMsg(e.getMessage());	
+		}
+		return result;
+
+	}
+}</pre>
+<p>Also it demonstrate all REST method with PathVariable. getDepts function tag with @RequestParam. These are those part of url that 
+represent variable value pair. URL would by like ?varible=value and request can be send as /dept or /dept/?petId=23</p>
+<p>How about getting result in JSON? Above code already taking care of json output. Try baseURL/dept with header as json.</p>
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+curl -X GET http://cta:8090/dept -H "Accept: application/xml"
+OR 
+curl -X GET http://cta:8090/dept -H "Accept: application/json"
+</pre>
+<p>What about returning control to certain view where variable value can be  menupulate.</p>
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+package com.common.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -96,45 +203,39 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.common.connection.DeptConnection;
-import com.common.model.Dept;
+import com.common.connection.EmpConnection;
 
 @Controller
-@RequestMapping(value="/dept")
-public class CompanyHandler {
+public class EmployeeController {
 
 	@Autowired
-	DeptConnection connection;
-
-	@RequestMapping(method=RequestMethod.GET)
-	public ModelAndView getDepts(@RequestParam(value="petId", required=false) Integer petId,
-			HttpServletRequest   request,
-			HttpServletResponse  response) throws Exception{
+	EmpConnection connection;
+	
+	@RequestMapping(value="/emp/{id}",method=RequestMethod.GET)
+	public ModelAndView getEmp(@PathVariable String id, HttpServletRequest   request,
+			HttpServletResponse  response, ModelAndView model) throws Exception{
 		String result ;
-		ModelAndView mv = new ModelAndView();
-		
+		model.setViewName("result");
 		try{
-			result = connection.getDepts();
+			result = connection.getEmp(id);
 		}catch(Exception e){
-			mv.addObject("message", e.getMessage());
-			mv.setViewName("error");
-			return mv;	
+			model.addObject("message", e.getMessage());
+			return model;	
 		}
-		mv.addObject("message",result);
-		mv.setViewName("result");
-		return mv;	
+		model.addObject("message",result);
+		return model;
 
 	}
 	
-	@RequestMapping(value="/{id}",method=RequestMethod.GET)
-	public String getDept(@PathVariable String id, HttpServletRequest   request,
+	@RequestMapping(value="/empList/{id}",method=RequestMethod.GET)
+	public String getEmpList(@PathVariable String id, HttpServletRequest   request,
 			HttpServletResponse  response, ModelMap model) throws Exception{
 		String result ;
 		try{
-			result = connection.getDept(id);
+			result = connection.getEmpList(id);
 		}catch(Exception e){
 			model.addAttribute("message", e.getMessage());
 			return "error";	
@@ -143,14 +244,33 @@ public class CompanyHandler {
 		return "result";
 
 	}
-	@RequestMapping(value="/{deptid}/{deptDesc}",method=RequestMethod.POST)
+	
+	
+	@RequestMapping(value="/emp/{id}/{firstName}/{lastName}/{dept}",method=RequestMethod.POST)
 	@Transactional
-	public String postDept(@PathVariable("deptid") String deptID, @PathVariable String deptDesc,
+	public String postEmp(@PathVariable int id,@PathVariable String firstName,
+			@PathVariable String lastName,@PathVariable String dept,
 			HttpServletRequest   request,
 			HttpServletResponse  response, ModelMap model) throws Exception{
 		String result ;
 		try{
-			result = connection.postDept(deptID, deptDesc);
+			result = connection.postEmp(id, firstName, lastName, dept);
+		}catch(Exception e){
+			model.addAttribute("message", e.getMessage());
+			return "error";
+		}
+		model.addAttribute("message", result);
+		return "result";
+	}
+	@RequestMapping(value="/emp/{id}/{firstName}/{lastName}/{dept}",method=RequestMethod.PUT)
+	@Transactional
+	public String putEmp(@PathVariable int id,@PathVariable String firstName,
+			@PathVariable String lastName,@PathVariable String dept,
+			HttpServletRequest   request,
+			HttpServletResponse  response, ModelMap model) throws Exception{
+		String result ;
+		try{
+			result = connection.putEmp(id, firstName, lastName, dept);
 		}catch(Exception e){
 			model.addAttribute("message", e.getMessage());
 			return "error";
@@ -159,29 +279,13 @@ public class CompanyHandler {
 		return "result";
 
 	}
-	@RequestMapping(value="/{deptid}/{deptDesc}",method=RequestMethod.PUT)
-	@Transactional
-	public String putDept(@PathVariable String deptid, @PathVariable String deptDesc,
-			HttpServletRequest   request,
+	@RequestMapping(value="/emp/{id}",method=RequestMethod.DELETE)
+	@Transactional 
+	public String deleteEmp(@PathVariable String id, HttpServletRequest   request,
 			HttpServletResponse  response, ModelMap model) throws Exception{
 		String result ;
 		try{
-			result = connection.putDept(deptid, deptDesc);
-		}catch(Exception e){
-			model.addAttribute("message", e.getMessage());
-			return "error";
-		}
-		model.addAttribute("message", result);
-		return "result";
-
-	}
-	@RequestMapping(value="/{id}",method=RequestMethod.DELETE)
-	@Transactional
-	public String deleteDept(@PathVariable String id, HttpServletRequest   request,
-			HttpServletResponse  response, ModelMap model) throws Exception{
-		String result ;
-		try{
-			result = connection.deleteDept(id);
+			result = connection.deleteEmp(id);
 		}catch(Exception e){
 			model.addAttribute("message", e.getMessage());
 			return "error";	
@@ -190,25 +294,11 @@ public class CompanyHandler {
 		return "result";
 
 	}
+	
 }</pre>
-<p>Examine the getDepts return type and getDept return type. One is returning String and other ModelAndView, but both 
-transferring control to the view.</p>
-<p>Also it demonstrate all REST method with PathVariable. getDepts function tag with @RequestParam. These are those part of url that 
-represent variable value pair. URL would by like ?varible=value and request can be send as /dept or /dept/?petId=23</p>
-<p>How about getting result in JSON? Need to add following the following bean.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
-&lt;bean id="jacksonMessageConverter"
-	class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"&gt;&lt;/bean&gt;
-&lt;bean
-	class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"&gt;
-	&lt;property name="messageConverters"&gt;
-		&lt;list&gt;
-			&lt;ref bean="jacksonMessageConverter" /&gt;
-		&lt;/list&gt;
-	&lt;/property&gt;
-&lt;/bean&gt;</pre>
-
-final HttpServletResponse httpResponse
+<p>Observer return type of getEmp and getEmpList, both are different and returning control to the result vies(jsp).</p>
+<p> <b>Base URL :</b> <a href='http://restapp.systemlogic.cloudbees.net'><span>http://restapp.systemlogic.cloudbees.net</span></a></p>
+<p><a href='https://github.com/systemlogic/RestApp/archive/master.zip'><span>Download this Example</span></a></p>
 			</td>
 			<%@ include file="rightPane.jsp"%>
 		</tr>
