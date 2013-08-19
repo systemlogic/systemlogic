@@ -22,7 +22,7 @@
         	instantiated, assembled, and otherwise managed by a Spring IoC container</p>
 
 <p>Bean which is interest of xml and annotation based example of Hello World.</p>        	
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package com.bean;
 
 public class HelloBean {
@@ -42,7 +42,7 @@ public class HelloBean {
 	}
 }</pre>
 <p>I think upto this point no problem. Let us define xml file say <b>services.xml</b> to be used By xml based example.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -62,7 +62,7 @@ public class HelloBean {
 &lt;/beans&gt;</pre>
 <p>Above piece of code is suffice to explain the xml example how ever we will see annotation based code here as well. </p>
 <p>By default xml configuration file is searched in resources folder of spring Maven project</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package com.bean;
 
 import org.springframework.context.annotation.Bean;
@@ -78,7 +78,7 @@ public class AppConfig {
 }</pre>
 <p>Here's the show begins.</p>
 
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package com;
 
 import org.springframework.context.ApplicationContext;
@@ -106,7 +106,7 @@ public class HelloWord {
 }</pre>
 <p>In above example Same bean is used in two different way to show the difference. It's a developer choice how s/he want to code it.</p>
 <p>It is believe you are having good command over maven in case not just showing pom.xml for this example only.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;project xmlns="http://maven.apache.org/POM/4.0.0" 
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 

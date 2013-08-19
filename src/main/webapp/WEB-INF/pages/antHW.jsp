@@ -15,14 +15,14 @@
         	<h2>Hello World Compile</h2>
         	<p>At this point we are not going to discuss how to write java code. What we are interesting in is ant build tool. Now onwards we are going to place 
         	our java code in src folder. One such file say Hello.java we have placed in src folder. Let see how ant works </p>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class hello{
 	public static void main(String...str){
 		System.out.println("Hello World");
 	}
 }</pre>
 <p>Nothing new at this point. Now we are going to create one build.xml file at src level with following code.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 	&lt;target name="EntryPoint"&gt;
@@ -31,7 +31,7 @@ public class hello{
 &lt;/project&gt;</pre> 
 <p>Type in ant command on terminal where build.xml file has been created and observe the output. Will it be compiling fine? Most probably yes.</p>
 <p>Is something wrong here? All class files are created into src folder. Let us separate them and put them into different folder. </p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property name="TARGET.FOLDER"          location="./target" /&gt;
@@ -44,7 +44,7 @@ public class hello{
 </pre>
 <p>Type in ant command again and check the output. I believe it is always good practice to clean the destination directory first and then make 
 the project.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property name="TARGET.FOLDER"          location="./target" /&gt;

@@ -15,7 +15,7 @@
         	<h2>sleep</h2>
         	<p>sleep is static method of Thread class. It put only currently running thread into sleep.  Thread is put onto sleep because 
         	it is running too fast, Or resource  might get release after some time.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class ThreadTest implements Runnable {
 	@Override
 	public void run() {
@@ -54,7 +54,7 @@ state, it only relinquish the running thread and put into the Runnable state. As
 static method of Thread class.</p> 
 <h2>join</h2>
 <p>Executing join on thread means other thread please join me at end when i complete. Join is Non-static method of thread class.</p>    
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class ThreadTest implements Runnable {
 
 	@Override

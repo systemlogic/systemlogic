@@ -15,7 +15,7 @@
         	<h2>xml and xsd</h2>
         	<p>Now days developers prefer to communicate in form of xml from one layer to another which provide them approtunity to change the implementation 
         	and change in the client technology. Before we proceed let us create one understandable xml.</p>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0"?&gt;
 &lt;Details&gt;
 	&lt;person&gt;
@@ -47,7 +47,7 @@
 &lt;/Details&gt;        	
 </pre>
 <p>Good job. Name it account.xml Now we will create xsd file for it. Use some online utility to convert xml to xsd. </p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;xs:element name="Details"&gt;
     &lt;xs:complexType&gt;
@@ -143,7 +143,7 @@
   &lt;/xs:element&gt;
 &lt;/xs:schema&gt;</pre>
 <p>Name above file as account.xsd. At this point one will have xsd and respective xml let us write it's classes.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 xjc -p com.bank.account -d account.xsd
 </pre>
 <p>xjc is utility provided by JDK at javac level and it should be in path before executing. So, is this piece of code enough to write the classes? <b>Yes</b>. 

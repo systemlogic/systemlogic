@@ -20,7 +20,7 @@
 			<h3>Installation</h3>
 			<p>If you are programmer comfortable with command line then you have to include the JUnit.jar(version 4.x) in class path.</p>
 			<p>Test whether JUnit is in class path or not</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 arorah1@E6410:~/maven$ java -cp /home/arorah1/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar org.junit.runner.JUnitCore
 
 Time: 0.001

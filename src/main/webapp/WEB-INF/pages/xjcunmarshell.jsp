@@ -15,7 +15,7 @@
         	<h2>Unmarshell</h2>
         	<p>Until now we have xml that contains the data, xsd which is defining xml structure and Classes which are created using xsd. In actual big suite of xml is used to communicate.
         	Let us work on real time scenario. Banker may fire the query for account holder and its account balance and got the result in xml that we are going to parse.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

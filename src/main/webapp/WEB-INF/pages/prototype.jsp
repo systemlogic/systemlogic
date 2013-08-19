@@ -21,7 +21,7 @@
         	To cope up with such problem we don't instantiate object using new keyword, we just clone it.</p>
         	
         	<h3>Prototype.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class Prototype implements Cloneable {
 	public Prototype() {}  
 	public Object clone() throws CloneNotSupportedException {
@@ -34,7 +34,7 @@ class Prototype implements Cloneable {
 }</pre>
 <p>Aforementioned is perfectly fine. Don't you think cloning is not good enough, I should also concentrate on developing new form.</p>
 <h3>Singleton.java</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class Prototype implements Cloneable {
 	   public Prototype() {}
 	   public Object clone() throws CloneNotSupportedException {

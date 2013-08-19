@@ -16,7 +16,7 @@
         	<p>Ant is meant to compile complex projects which could use multiple jars. Such Jars should be in classpath. Setting up class path in OS path/classpath 
         	is not a good practice. Ant provides us an facility to set the class path when ant runs provides Jar should be on filesystem.</p>
         	<p>Some such programs is shown below which requires some jar.</p>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package JUnitTest;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -34,7 +34,7 @@ public class ObserveTest {
 	}
 
 }</pre>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package JUnitTest;
 
 import org.junit.Rule;
@@ -49,7 +49,7 @@ public class AllTests {
 
 }</pre>
 <p>Try to compile it with build.xml defined as defined below.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property name="TARGET.FOLDER"          location="./target" /&gt;
@@ -66,7 +66,7 @@ public class AllTests {
 &lt;/project&gt;
 </pre>
 <p>Caught an error? <b>YES.</b> Let us modify ant script little bit and specify where is JUnit jar that code is looking for.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property name="TARGET.FOLDER"          location="./target" /&gt;
@@ -89,7 +89,7 @@ public class AllTests {
 	<p>In case when project is setup among different team member and each of them have different location for dependent jar. What one need to change is 
 	the location in property file and things will go fine. Also one can have mix and match combination for putting properties into build.xml and property file.</p>
 <h3>build.xml</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;?xml version="1.0" ?&gt;
 &lt;project name="makefile" default="EntryPoint"&gt;
 &lt;property file="build.properties" /&gt;
@@ -107,7 +107,7 @@ public class AllTests {
 &lt;/target&gt;
 &lt;/project&gt;</pre>
 <h3>build.properties</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 REPOSITORY.PATH=/home/arorah1/.m2/repository
 TARGET.FOLDER=./target</pre>
         </td>

@@ -16,7 +16,7 @@
         	<p>Spring OXM have implementation of Castor-Marshallar, jaxb2-marshaller, jibx-marshaller and xmlbeans-marshaller</p>
         	<h3>Castor-Marshallar</h3>
         	<p>Hope you have already thru with xjc topic, here we will see one simplest example of Marshell using Castor an open source XML binding framework.</p>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:oxm="http://www.springframework.org/schema/oxm"
@@ -35,7 +35,7 @@
 &lt;/beans&gt;</pre>
 
 <h3>Jaxb2Marshaller</h3>
-  	<pre class="pres"> 
+  	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;"> 
  &lt;beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:oxm="http://www.springframework.org/schema/oxm"
@@ -57,7 +57,7 @@
 &lt;/beans&gt;</pre>
 
 <h3>XmlBeansMarshaller</h3>
-  	<pre class="pres"> 
+  	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;"> 
  &lt;beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:oxm="http://www.springframework.org/schema/oxm"

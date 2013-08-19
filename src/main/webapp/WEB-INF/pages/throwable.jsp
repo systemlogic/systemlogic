@@ -18,7 +18,7 @@
         	Similarly, only this class or one of its subclasses can be the argument type in a catch clause.</p>
         		<p>Let us understand by example to see what can be thrown and catch and what is the significance of Error and Exception.</p>
         	<h3>MyThrowable.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package excep;
 public class MyThrowable extends Throwable {
 	private static final long serialVersionUID = -3076788776543246285L;
@@ -27,7 +27,7 @@ public class MyThrowable extends Throwable {
 	}
 }</pre>
 <h3>MyClass.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package excep;
 public class MyClass {
 	public void printingThrowable() throws MyThrowable{
@@ -40,7 +40,7 @@ public class MyClass {
 </pre>
 
 <h3>ThrowableTest.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package excep;
 
 public class ThrowableTest {
@@ -67,7 +67,7 @@ public class ThrowableTest {
 	  
 	  <p>At this point we don't have any code which can throw MyThrowable object. Let us throw it manually and observe the result.</p> 
 	<h3>ThrowableTest.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package excep;
 public class ThrowableTest {
 	public static void main(String[] args) {

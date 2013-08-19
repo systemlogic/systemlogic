@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>File</h2>
         	<p>There are many methods to perform file operation. We will see one such example and implements copy program.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 package FileOperation;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -39,7 +39,7 @@ public class cp {
 	}
 }</pre>
 <p>Let us copy file from source to destination. Doesn't it seems file copy utility of any OS. </p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 java -cp /media/Harsh/HeliosSDK/work/StackImp/bin FileOperation.cp /home/arorah1/gs /home/arorah1/out
 </pre>
         </td>

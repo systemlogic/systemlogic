@@ -17,7 +17,7 @@
         	subclass are categorized as Checked Exception.</p>
         	<p>Why use of some of library function complains Checked Exception. Let us simulate one such scenario.</p>
         		<h3>MyException.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class MyException {
 	public static void main(String[] args) {
 		LibraryClass imp = new LibraryClass();

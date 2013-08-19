@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>JDBC</h2>
         	<p>What we have to do and what spring does.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 	<table border="1" >
 		<tr><th>Action</th><th>spring</th><th>You</th></tr>
 		<tr><td>Define connection parameters.</td><td></td><td>X</td></tr>
@@ -30,13 +30,13 @@
 	</table>
 </pre>
       <p>Defining coneection</p>
-      <pre class="pres">
+      <pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 mysql.driver=com.mysql.jdbc.Driver
 mysql.url=jdbc:mysql://localhost:3306/systemlogic
 mysql.user=root
 mysql.password=rain</pre>
 <p>Defining Entry in xml configuration file.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 &lt;bean id="jdbctemplete" class="org.springframework.jdbc.core.JdbcTemplate"&gt;
 	&lt;constructor-arg index="0"&gt;&lt;ref bean="dataSource"/&gt;
 	&lt;/constructor-arg&gt;
@@ -51,13 +51,13 @@ mysql.password=rain</pre>
 &lt;/bean&gt;
 &lt;context:property-placeholder location="/WEB-INF/jdbc.properties"/&gt;</pre>
 <p><b>Open Connection : </b> Spring will take care of opening the connection just specify below code.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 @Autowired
 @Qualifier("jdbctemplete")
 private JdbcTemplate jdbctemp;
 </pre>
 <p><b>Specify SQL Statement, Declare parameters and provide parameter values, Prepare and execute the statement : </b> </p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public String getDepts(){
 	String sql = "SELECT * FROM dept";
 	List&lt;Dept&gt; dept = jdbctemp.query(sql,new DeptRowMapper());
@@ -101,7 +101,7 @@ public String deleteDept(String id){
         <p>Observe instance of DeptRowMapper is passed. It is used to set and menupulate the Dept object which is later used to return values to the client.</p>
         
         <p><b>Dept Table operations</b></p>
-				<pre class="pres">
+				<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 				<table border="1" >
 					<tr><th>path</th><th>Request Type</th><th>Description</th></tr>
 					<tr><td>/dept</td><td>GET</td><td>Get all department</td></tr>

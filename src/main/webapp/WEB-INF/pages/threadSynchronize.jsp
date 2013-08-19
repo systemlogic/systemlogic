@@ -16,7 +16,7 @@
         	<p>Synchronization is the control access of common resource by multiple thread so that only one thread can execute synchronized code. Executing synchronized 
         	code obtain the lock on object if it is called on non-static method in this case no other thread can get into the synchronized method/block until entered 
         	thread completes it's synchronized method execution.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class ThreadTest implements Runnable {
 
 	@Override
@@ -44,7 +44,7 @@ public class ThreadTest implements Runnable {
 </pre>
  <p>Run the code with/without synchronized keyword in the method and observe the output.</p>
  <p>In case of Thread executes synchronized static method of class it obtain class level lock and no other thread can execute same or any other synchronized static method of the same class.</p>
- <pre class="pres">
+ <pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class ThreadTest implements Runnable {
 	@Override
 	public void run() {

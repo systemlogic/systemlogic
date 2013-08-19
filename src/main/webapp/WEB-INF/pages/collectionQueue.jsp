@@ -15,7 +15,7 @@
         	<h2>Queue</h2>
         	<p>PriorityQueue and LinkedList class implement Queue interface. We will see implementation and time complexity of PriorityQueue here.</p>
 		<h3>PriorityQueue</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class priorityQueue{
 	public static void main(String...strings){
 		PriorityQueue<Integer> al = new PriorityQueue<Integer>();
@@ -38,7 +38,7 @@ class priorityQueue{
 <p>Priority Queue data structure is based on priority heap. In addition to add and remove it supports offer() and poll() to add and remove element. 
 Internal add and remove call offer and poll only. Worst case insertion operation will take O(log n) which is the time complexity of Heap. 
 where in beast case only takes O(1). </p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 private void siftUpUsingComparator(int k, E x) {
         while (k > 0) {
             int parent = (k - 1) >>> 1;
@@ -51,7 +51,7 @@ private void siftUpUsingComparator(int k, E x) {
         queue[k] = x;
 }</pre>
 <p>Time complexity of removing an element is also an O(log n) since element need to shift in the tree down to leaf.
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 private void siftDownUsingComparator(int k, E x) {
         int half = size >>> 1;
         while (k < half) {
@@ -71,7 +71,7 @@ private void siftDownUsingComparator(int k, E x) {
 </pre>
 <h2>PriorityQueue Complex Object</h2>
 What if user have class object to be stored in Priority Queue. In such case one has to provide implementation to comparator.
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class PriorityObject{
 	int uid ;
 	String name;	

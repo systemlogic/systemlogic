@@ -19,7 +19,7 @@
         <h2>toString()</h2>
 		<p>By any chance did you ever print the object in System.out.println(obj). Let us do it here now.</p>
 		<h3>Writer.java</h3>
-        	<pre class="pres">
+        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class Writer{
 	String fName;
 	String lName;
@@ -37,7 +37,7 @@ class Writer{
 <p>Output for aforementioned program is Writer@89ffb18. Does't make any sense to me. Let us give some defination to toString by overriding and see the 
 output.</p>
 <h3>Writer.java</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class Writer{
 	String fName;
 	String lName;
@@ -61,7 +61,7 @@ class Writer{
 type is basic like int, float, long (String is complex type) the value passed is the value hold in the variable where as in complex type value passed 
 is address of the object that it is referring to.</p>
 <h3>equalTest.java</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class equalTest{
 	public static void main(String ... arr){
 		String a = new String("sun");
@@ -77,7 +77,7 @@ class equalTest{
 pointing to two different memory address will return false even if object variable contain same value. In order to run the equality check on complex variable or 
 class object we have to give definition to equals method </p>
 <h3>Writer.java</h3>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 class Writer{
 	String fName;
 	String lName;

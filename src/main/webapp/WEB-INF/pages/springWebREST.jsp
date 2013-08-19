@@ -15,7 +15,7 @@
 				<p>This example is implemented using REST webservice using spring and Data 
 				integration using jdbc. Method that are exposed are as follows</P>
 				<h2>Department operations</h2>
-				<pre class="pres">
+				<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 				<table border="1" >
 					<tr><th>path</th><th>Request Type</th><th>Description</th></tr>
 					<tr><td>/dept</td><td>GET</td><td>Get all department</td></tr>
@@ -26,7 +26,7 @@
 				</table></pre>
 				<p>Use Header as <b>Accept: application/json</b> OR <b>Accept: application/xml</b></p>
 				<h2>Employee operations</h2>
-				<pre class="pres">
+				<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 				<table border="1" >
 					<tr><th>path</th><th>Request Type</th><th>Description</th></tr>
 					<tr><td>/emp/{id}</td><td>GET</td><td>Get employee information identified by id</td></tr>

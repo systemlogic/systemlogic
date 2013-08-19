@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Deadlock</h2>
         	<p>A situation where two or more thread are trying to acquire lock that is held by other thread.</p>
-<pre class="pres">
+<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
 public class ThreadTest {
     static class Friend {
         private final String name;
