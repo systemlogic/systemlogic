@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Console</h2>
         	<p>So far we have seen program flow with hardcoded values. What if there is requirement user to input value thru console?</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.util.Scanner;
 public class consoleTest {
 	public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class consoleTest {
 <p>There are many way to read the input from console. Depending upon the requirement console input can be type cast to some appropriate. There is also Console class which 
 take care of username and password(showing **) input.</p>
 <p>Let us see one more program to see Username and password utility.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.io.Console;
 public class loginUtilty {
 	public static void main(String[] args) {

@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Marshell</h2>
         	<p>You have values/Object and you want data in xml format to communicate with server. In such case one has to set all variables to desired values.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package xjc;
 
 import java.io.FileOutputStream;

@@ -14,7 +14,7 @@
 				<h2>Web Servlet</h2>
 				<p><b>DispatcherServlet : </b> is the Servlet inherits from the HttpServlet and declared in the web.xml 
 				One need to map requests that DispatcherServlet need to handle, by using a URL mapping web.xml file.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 &lt;servlet&gt;
 	&lt;servlet-name&gt;<b>mvc-dispatcher</b>&lt;/servlet-name&gt;
 	&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
@@ -31,7 +31,7 @@
 <p>Wait a minute. For some reason you want to use different filename other then used in servlet name and also you want 
 to split the bean defination among different xml files. </p>
 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 &lt;servlet&gt;
 	&lt;servlet-name&gt;mvc-dispatcher&lt;/servlet-name&gt;
 	&lt;servlet-class&gt;
@@ -56,7 +56,7 @@ to split the bean defination among different xml files. </p>
 
 <p>@Controller annotation in the class tells this class will serves as controller. So what we need to use @Controller? We need to define location to scan for 
 classes.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;beans xmlns="http://www.springframework.org/schema/beans" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -73,16 +73,16 @@ classes.</p>
 
 &lt;/beans&gt;</pre>
 and in class
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 @Controller
 public class CompanyHandler {}</pre>
 <p>Is this suffice? No we have to put entry into the class(@RequestMapping) to define URL mapping.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 @Controller
 @RequestMapping("/dept")
 public class CompanyHandler {}</pre>
 <p>Above mapping will make sure all request prefix with /dept. So how the class should look like.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package com.common.controller;
 
 import javax.servlet.http.HttpServletRequest;
@@ -185,7 +185,7 @@ public class CompanyHandler {
 <p>Also it demonstrate all REST method with PathVariable. getDepts function tag with @RequestParam. These are those part of url that 
 represent variable value pair. URL would by like ?varible=value and request can be send as /dept or /dept/?petId=23</p>
 <p>How about getting result in JSON? Above code already taking care of json output. Try baseURL/dept with header as json.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 curl -X GET http://cta:8090/dept -H "Accept: application/xml"
 OR 
 curl -X GET http://cta:8090/dept -H "Accept: application/json"

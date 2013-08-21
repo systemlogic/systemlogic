@@ -16,10 +16,10 @@
         	<p>Generally we are firing only ant on terminal. What if we don't want every thing from ant action and want only certain piece to compile.
         	All tag that has been defined can be used with ant to perform specific functionality. For example clean tag has been defined to deleted 
         	the output directory.</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 ant clean</pre>
 <p>In case one is interested in JARCreation and it's dependent processing</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 ant JARCreation
 </pre>
         

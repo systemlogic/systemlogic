@@ -15,7 +15,7 @@
         	<h2>Serialization</h2>
         	<p>Serialization is process to create object graph, which will later saved to I/O classes and transfered over the medium or save it for later use. Each serialization process is associated deserialization.
         	Class object that need to be serialize need to implement Serializable interface which is also a marker interface. Member variables and static variables that are not marked as transient become part of object graph(serialize).</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package serial;
 import java.io.Serializable;
 class SerializeClass implements Serializable{
@@ -64,7 +64,7 @@ class SerializeClass implements Serializable{
 
 }</pre>
 <p>Let us save the state of this class object, read it back and check what all cases are passed or failed.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 package serial;
 
 
@@ -137,7 +137,7 @@ public class SerialJUnit {
 <p>Each class is associated with serialVersionUID. If not defined compiler tag the class by it's own. Until now we have not seen significance of serialVersionUID in any class. 
 Let us see one good example. </p>
 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 class TestSerial implements Serializable{
 	private static final long serialVersionUID = 12L;
 	public int a ;
@@ -150,7 +150,7 @@ class TestSerial implements Serializable{
 
 <p>We are going to serialize the object of above class. Let us write serialize and deserialize code in two different different file.</p>
 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -163,7 +163,7 @@ public class serial{
 	}
 }</pre>
 
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 public class deserial{
@@ -191,7 +191,7 @@ public class deserial{
 <p>It is always better to tag the class with serialVersionUID and have significance in <b>client/server environment</b> or <b>writing/reading file</b>.</p>
 <h2>serialver</h2>
 <p>To generate serialVersionUID one can use JDK serialver utility command ship with sdk and class should implements Serializable otherwise it will not genrate the one.</p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 serialver className</pre>
 
         </td>

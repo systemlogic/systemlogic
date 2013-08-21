@@ -17,7 +17,7 @@
         	event that the threads care about. When thread locks an object. When it is running, waiting, sleeping or Monitoring? </p>
         	<p>wait() method is always called from synchronized block which means thread acquires lock before it executes wait() 
         	method on object. So what really happen when it executes wait(), It simply release the lock. Let us understand it with example</p>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 import java.util.Date;
 
 public class ThreadTest{
@@ -97,7 +97,7 @@ class Notifier implements Runnable {
         	 <p>Thread sleep won't release the lock.</p>
         	 <h2>wait, notifyAll</h2>
         	 <p>When multiple thread try to execute synchronized block of wait(), notifier thread uses notifyAll method of the object. </p>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 import java.util.Date;
 
 public class ThreadTest{

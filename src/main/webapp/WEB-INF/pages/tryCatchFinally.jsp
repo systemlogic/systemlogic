@@ -17,7 +17,7 @@
         	code in finally. For any piece of code that throw an object at least need catch or finally(if finally only then all Exception in function throws 
         	statement) to compile it fine. </p>
         	<h3>tryCatch.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 public class tryCatch {
 	public static void main(String[] args) {
 		LibraryClass imp = new LibraryClass();
@@ -52,7 +52,7 @@ class LibraryClass{
 		Closeable or AutoCloseable interface.Because the BufferedReader instance is declared in a try-with-resource statement, it will be closed regardless 
 		of whether the try statement completes normally or abruptly (as a result of the method BufferedReader.readLine throwing an IOException).</p>
         	<h3>Exception7.java</h3>
-        	<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+        	<pre class="pres">
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -68,7 +68,7 @@ public class Exception7{
 	}
 }</pre>
     <p>Lets see one more example to check how try(with resource ) works. Try your own to check output.</p>
-    <pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+    <pre class="pres">
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -97,7 +97,7 @@ class MyClass implements AutoCloseable{
     </pre>   	
 <p>Let's  write some recursive code which throw an error, handle it and again make recursive call.</p>
 <h3>Recursive.java</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 public class Recursive {
 	static int i = 0;
 	public static void main(String ... arg){
@@ -122,7 +122,7 @@ poping up the items. When Garbage collector will free enough resource control wi
 couple of main method call and this will continue.Output could be something like below.</p>
 
 <h3>Output</h3>
-<pre style="background-color:F0F7FE; border: 1px solid #CCCCCC; display: block; margin: 12px 10px; padding: 12px 10px 16px; overflow-x: auto;">
+<pre class="pres">
 pop items=9704
 Push item=9705
 This Item can not be push=9705pop items=9704
