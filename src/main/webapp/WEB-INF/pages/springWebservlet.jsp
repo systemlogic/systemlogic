@@ -186,9 +186,9 @@ public class CompanyHandler {
 represent variable value pair. URL would by like ?varible=value and request can be send as /dept or /dept/?petId=23</p>
 <p>How about getting result in JSON? Above code already taking care of json output. Try baseURL/dept with header as json.</p>
 <pre class="pres">
-curl -X GET http://cta:8090/dept -H "Accept: application/xml"
+curl -X GET http://restapp.systemlogic.cloudbees.net/dept -H "Accept: application/xml"
 OR 
-curl -X GET http://cta:8090/dept -H "Accept: application/json"
+curl -X GET http://restapp.systemlogic.cloudbees.net/dept -H "Accept: application/json"
 </pre>
 <p>What about returning control to certain view where variable value can be  menupulate.</p>
 <pre class="pres">

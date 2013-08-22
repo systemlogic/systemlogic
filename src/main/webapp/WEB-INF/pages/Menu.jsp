@@ -103,7 +103,7 @@
 			</div>
 			<div class="column">
 				<a href='/spring/creational'>Creational</a> 
-				<a href='#'>Structural</a>
+				<a href='/spring/adaptor'>Structural</a>
 				<a href='#'>Behaviour</a>
 			</div>
 

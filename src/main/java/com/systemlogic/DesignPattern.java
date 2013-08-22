@@ -17,5 +17,11 @@ public class DesignPattern {
 	@RequestMapping(value = "/prototype", method = RequestMethod.GET)
 	public String getPrototype(ModelMap model) {
 		return "prototype";
+	}@RequestMapping(value = "/objectPool", method = RequestMethod.GET)
+	public String getobjectPool(ModelMap model) {
+		return "objectPool";
+	}@RequestMapping(value = "/adaptor", method = RequestMethod.GET)
+	public String getadaptor(ModelMap model) {
+		return "adaptor";
 	}
 }
