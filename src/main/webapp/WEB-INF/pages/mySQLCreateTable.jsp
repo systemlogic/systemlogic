@@ -58,21 +58,20 @@ FirstName varchar(20) NOT NULL,
 LastName varchar(20) NOT NULL,
 department varchar(20),
 primary key(EmpId),
-constraint foreign key(department) references dept(department),
-check (EmpId > 9999)
+constraint foreign key(department) references dept(department)
 );</pre>
 <p>Table emp make sure no employee record will be added with department that is not present in dept table.</p>
-<p>What about auto imcrement for EmpId which will get next available number in the sequence.</p>
+<p>What about auto increment for EmpId which will get next available number in the sequence.</p>
 <pre class="pres">
 create table emp(
 EmpId int NOT NULL AUTO_INCREMENT,
 FirstName varchar(20) NOT NULL,
 LastName varchar(20) NOT NULL,
+Salary int NOT NULL default 0,
 department varchar(20),
 Sex ENUM('Male', 'Female', 'Others') NOT NULL default 'Male',
 primary key(EmpId),
-constraint foreign key(department) references dept(department),
-check (EmpId > 9999)
+constraint foreign key(department) references dept(department)
 );</pre>
 <p>How about using Database Engines</p>
 <pre class="pres">
@@ -80,11 +79,11 @@ create table emp(
 EmpId int NOT NULL AUTO_INCREMENT,
 FirstName varchar(20) NOT NULL,
 LastName varchar(20) NOT NULL,
+Salary int NOT NULL default 0,
 department varchar(20),
 Sex ENUM('Male', 'Female', 'Others') NOT NULL default 'Male',
 primary key(EmpId),
-constraint foreign key(department) references dept(department),
-check (EmpId > 9999)
+constraint foreign key(department) references dept(department)
 ) engine=InnoDB;</pre>
 <p>So here is the question is, What is database engine and what it's significance? Storage engine provides different storage 
 mechanism to sotre data in file, indexing, locking mechanism and other different technique. For Example InnoDB is optamised 
@@ -111,11 +110,11 @@ create table emp(
 EmpId int NOT NULL AUTO_INCREMENT,
 FirstName varchar(20) NOT NULL,
 LastName varchar(20) NOT NULL,
+Salary int NOT NULL default 0,
 department varchar(20),
 Sex ENUM('Male', 'Female', 'Others') NOT NULL default 'Male',
 primary key(EmpId),
 constraint foreign key(department) references dept(department), 
-check (EmpId > 9999),
 index indexing(EmpId)
 ) engine=InnoDB; 
 
