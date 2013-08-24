@@ -30,7 +30,7 @@
 				<table border="1" >
 					<tr><th>path</th><th>Request Type</th><th>Description</th></tr>
 					<tr><td>/emp/{id}</td><td>GET</td><td>Get employee information identified by id</td></tr>
-					<tr><td>/empList/{id}</td><td>GET</td><td>Get all employee list</td></tr>
+					<tr><td>/empList/{did}</td><td>GET</td><td>Get all employee list in department identified by did.</td></tr>
 					<tr><td>/emp/{id}/{firstName}/{lastName}/{dept}</td><td>POST</td><td>Add employee identified by information</td></tr>
 					<tr><td>/emp/{id}/{firstName}/{lastName}/{dept}</td><td>PUT</td><td>Update employee information identified by id</td></tr>
 					<tr><td>/emp/{id}</td><td>Delete</td><td>Delete the employee information identified by id</td></tr>

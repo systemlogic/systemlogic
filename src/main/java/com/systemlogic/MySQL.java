@@ -11,6 +11,9 @@ public class MySQL{
 	@RequestMapping(value = "/mySQL", method = RequestMethod.GET)
 	public String getmySQL(ModelMap model) {
 		return "mySQL";
+	}@RequestMapping(value = "/mySQLCreateTable", method = RequestMethod.GET)
+	public String getmySQLCreateTable(ModelMap model) {
+		return "mySQLCreateTable";
 	}
 	
 }

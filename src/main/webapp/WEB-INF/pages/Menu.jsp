@@ -128,7 +128,7 @@
 			</div>
 			<div class="column">
 				<a href='/spring/mySQL'><span>Create Database</span>
-				</a> <a href='/spring/mySQL'><span>Create Tables</span>
+				</a> <a href='/spring/mySQLCreateTable'><span>Create Tables</span>
 				</a> <a href='/spring/mySQL'><span>Select Queries</span>
 				</a> <a href='/spring/mySQL'><span>Inner Quaries</span>
 				</a> <a href='/spring/mySQL'><span>Joins</span>

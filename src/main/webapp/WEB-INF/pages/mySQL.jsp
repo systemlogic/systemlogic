@@ -33,6 +33,13 @@ use database_name;
 <pre class="pres">
 mysql -u root -p database_name;
 </pre>
+<p>You are into the database and want to see what all tables are present</p>
+<pre class="pres">
+show tables;
+</pre>
+<p>You have seen the table list however you want to see the structure of any particular table.</p>
+<pre class="pres">desc TABLE_NAME;</pre>
+
         </td>
         <%@ include file="rightPane.jsp" %>
     </tr>

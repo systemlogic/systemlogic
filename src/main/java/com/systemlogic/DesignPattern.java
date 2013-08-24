@@ -23,5 +23,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/adaptor", method = RequestMethod.GET)
 	public String getadaptor(ModelMap model) {
 		return "adaptor";
+	}@RequestMapping(value = "/bridge", method = RequestMethod.GET)
+	public String getbridge(ModelMap model) {
+		return "bridge";
 	}
 }
