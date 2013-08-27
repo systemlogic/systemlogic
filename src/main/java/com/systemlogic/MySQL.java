@@ -17,6 +17,12 @@ public class MySQL{
 	}@RequestMapping(value = "/mySQLSelectStatement", method = RequestMethod.GET)
 	public String getmySQLSelectStatement(ModelMap model) {
 		return "mySQLSelectStatement";
+	}@RequestMapping(value = "/mySQLInnerQuaries", method = RequestMethod.GET)
+	public String getmySQLInnerQuaries(ModelMap model) {
+		return "mySQLInnerQuaries";
+	}@RequestMapping(value = "/mySQLJoinsMath", method = RequestMethod.GET)
+	public String getmySQLJoinsMath(ModelMap model) {
+		return "mySQLJoinsMath";
 	}
 	
 }

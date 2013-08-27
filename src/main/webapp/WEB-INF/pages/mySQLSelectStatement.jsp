@@ -56,7 +56,7 @@ select * from emp;
 <pre class="pres">
 SELECT * FROM emp WHERE Sex like 'Female';
 </pre>
-<p>Getting Male employee data will be same. Let us get data for Sex that are either Male of Female but not Others.</p>
+<p>Getting Male employee data will be same. Let us get data for Sex that are Male or Female but not Others.</p>
 <pre class="pres">
 select * from emp where Sex like '%Male';
 select * from emp where Sex in ('Male','Female');</pre>
@@ -97,6 +97,10 @@ Select department, SUM(Salary) as Amount from emp group by department;</pre>
 <pre class="pres">
 select department, AVG(Salary) as Average from emp group by department;</pre>
 <p>There are many other Aggrigate function to use with group by.</p>
+<p>group by statement is come with condition statement having which where statement can not do.</p>
+<pre class="pres">
+select department,sum(Salary) from emp group by department having sum(Salary) > 20000;
+select department,sum(Salary) from emp where department like '12' group by department having sum(Salary) > 20000;</pre>
 <p>Do you think your query is coping up with really big set of rows and taking time? Use Index that defined earlier in create table.</p>
 <pre class="pres">
 select * from emp use index(indexing);
@@ -104,6 +108,12 @@ select * from emp use index(indexing);
 <p>But one should know what all indexes has been created over the period of time, So over indexing  wasting of disk space 
 and will slow the database down on write.</p>
 <pre class="pres">show index from emp;</pre>
+<p>Now days Application bring pageful information when scroll down another pagefull information will be pulled,
+and addup to current page.So how to do it.</p>
+<pre class="pres">
+select * from emp use index(indexing) limit 0,5;
+</pre>
+<p>where 0 is start index and 5 is number of rows to be retrived.</p>
 
 
         </td>

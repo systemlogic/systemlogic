@@ -29,14 +29,14 @@ description varchar(100)
 <pre class="pres">
 create table dept(
 department varchar(20),
-description varchar(20),
+description varchar(100),
 primary key(department) 
 );</pre>
 <p>Primary key can not be null but at the same time you don't want descrition to have null value</p>
 <pre class="pres">
 create table dept(
 department varchar(20),
-description varchar(20) NOT NULL,
+description varchar(100) NOT NULL,
 primary key (department)
 );</pre>
 <p>Any person who join the company should be in any of the department defined just now. Which also means we have to refer
