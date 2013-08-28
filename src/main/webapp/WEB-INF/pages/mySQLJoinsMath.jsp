@@ -87,10 +87,10 @@ select * from emp inner join dept using(department);
 <pre class="pres">
 select * from emp natural join dept;</pre>
 <p><b>Natural Left join :</b> All records that are matched on the basis of common column and all unmatched records from 
-left side table to statement. It is equivalent to Natural left Outer Join.</p>
+left side table of statement. It is equivalent to Natural left Outer Join.</p>
 <pre class="pres">select * from emp natural left join dept;</pre>
 <p><b>Natural Right join :</b> All records that are matched on the basis of common column and all unmatched records from 
-right side table to statement.  It is equivalent to Natural Right Outer Join. </p>
+right side table of statement.  It is equivalent to Natural Right Outer Join. </p>
 <pre class="pres">select * from emp natural right join dept;</pre>
 
         </td>

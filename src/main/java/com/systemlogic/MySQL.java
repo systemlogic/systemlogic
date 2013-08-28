@@ -23,6 +23,9 @@ public class MySQL{
 	}@RequestMapping(value = "/mySQLJoinsMath", method = RequestMethod.GET)
 	public String getmySQLJoinsMath(ModelMap model) {
 		return "mySQLJoinsMath";
+	}@RequestMapping(value = "/mySQLDeleteDropTruncate", method = RequestMethod.GET)
+	public String getmySQLDeleteDropTruncate(ModelMap model) {
+		return "mySQLDeleteDropTruncate";
 	}
 	
 }

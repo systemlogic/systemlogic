@@ -25,6 +25,11 @@ mysql -u root -p
 <pre class="pres">
 create database database_name;
 </pre>
+<p>For some reason you have created the database but forgot what database you have created.</p>
+<pre class="pres">show databases;</pre>
+<p>At the same time if you want to drop the database.</p>
+<pre class="pres">
+drop database databse_name;</pre>	
 <p>If you have logged in to the system without selecting database then use below command to select the database you are going to work.</p>
 <pre class="pres">
 use database_name;

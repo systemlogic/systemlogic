@@ -132,7 +132,7 @@
 				</a> <a href='/spring/mySQLSelectStatement'><span>Select Queries</span>
 				</a> <a href='/spring/mySQLInnerQuaries'><span>Inner Quaries</span>
 				</a> <a href='/spring/mySQLJoinsMath'><span>Joins and Functions</span>
-				</a> <a href='/spring/mySQL'><span>Delete and Truncate</span>
+				</a> <a href='/spring/mySQLDeleteDropTruncate'><span>Delete and Truncate</span>
 				</a> <a href='/spring/mySQL'><span>Stored Procedure</span>
 				</a>
 
