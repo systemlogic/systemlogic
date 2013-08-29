@@ -26,6 +26,9 @@ public class MySQL{
 	}@RequestMapping(value = "/mySQLDeleteDropTruncate", method = RequestMethod.GET)
 	public String getmySQLDeleteDropTruncate(ModelMap model) {
 		return "mySQLDeleteDropTruncate";
+	}@RequestMapping(value = "/mySQLProcedureFunction", method = RequestMethod.GET)
+	public String getmySQLProcedureFunction(ModelMap model) {
+		return "mySQLProcedureFunction";
 	}
 	
 }
