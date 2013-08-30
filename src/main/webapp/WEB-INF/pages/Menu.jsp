@@ -131,10 +131,10 @@
 				</a> <a href='/spring/mySQLCreateTable'><span>Create Tables</span>
 				</a> <a href='/spring/mySQLSelectStatement'><span>Select Queries</span>
 				</a> <a href='/spring/mySQLInnerQuaries'><span>Inner Quaries</span>
-				</a> <a href='/spring/mySQLJoinsMath'><span>Joins and Functions</span>
-				</a> <a href='/spring/mySQLDeleteDropTruncate'><span>Delete and Truncate</span>
+				</a> <a href='/spring/mySQLJoinsMath'><span>Joins/Functions</span>
+				</a> <a href='/spring/mySQLDeleteDropTruncate'><span>Delete/Truncate</span>
 				</a> <a href='/spring/mySQLProcedureFunction'><span>Views</span>
-				</a> <a href='/spring/mySQLProcedureFunction'><span>Procedure and Function</span>
+				</a> <a href='/spring/mySQLProcedureFunction'><span>Procedure/Function</span>
 				
 				</a>
 

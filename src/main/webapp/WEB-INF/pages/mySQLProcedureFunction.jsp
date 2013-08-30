@@ -67,7 +67,8 @@ select @salary;</pre>
 Let us use it for insert and update a record.</p>
 <pre class="pres">
 DELIMITER //
-CREATE PROCEDURE addemp(IN id INT, IN fname VARCHAR(20), IN lname VARCHAR(20), IN sal int, IN dept VARCHAR(20),IN Sx VARCHAR(20))
+CREATE PROCEDURE addemp(IN id INT, IN fname VARCHAR(20), IN lname VARCHAR(20), IN sal int,
+IN dept VARCHAR(20),IN Sx VARCHAR(20))
 BEGIN
 INSERT INTO emp(EmpId,FirstName,LastName,Salary,department,Sex) values(id,fname,lname,sal,dept,Sx);
 END//
@@ -118,7 +119,8 @@ DELIMITER;
 call casesalary(1008,@salary);
 select @salary;
 </pre>
-<p>No programing language is complete without Looping. MySql supports, LOOP, REPEAT and WHILE. Here we will see only one.</p>
+<p>No programing language is complete without Looping. MySql supports, LOOP, REPEAT and WHILE. Here we will see only one, 
+other would be learning syntax.</p>
 <pre class="pres">
 DELIMITER //
 CREATE PROCEDURE repeatloop(INOUT sum INT)
@@ -136,6 +138,50 @@ DELIMITER ;
 SET @count = 100;
 call repeatloop(@count);
 select @count;
+</pre>
+<p><b>Cursor : </b> allow iterate a set of rows returned by a query and process. Cursors are read only, non-scrollable 
+and asensitive (asensitive:-actual and insensitive:-temporary copy). Typical cursor structure will be like this.</p>
+<pre class="pres">
+DECLARE cursor_name CURSOR FOR SELECT_statement;
+OPEN cursor_name;
+FETCH cursor_name INTO variables list;
+CLOSE cursor_name;</pre>
+<p>Let's try Salary adjustment example for employees with cursor.</p>
+<pre class='pres'>
+DELIMITER //
+CREATE PROCEDURE updateempsal(IN id INT, IN sal INT)
+BEGIN
+UPDATE emp SET Salary=sal where EmpID = id;
+END//
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS saladjest;
+DELIMITER //
+CREATE PROCEDURE saladjest()
+BEGIN
+DECLARE id INT DEFAULT 0;
+DECLARE sal INT;
+DECLARE fname,lname,dept,sex varchar(20) ;
+DECLARE cur CURSOR FOR SELECT * FROM emp;
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET id = 0;
+OPEN cur;
+FETCH cur INTO id,fname,lname,sal,dept,sex;
+WHILE id!=0 DO
+IF(sal < 10000) THEN
+call updateempsal(id,15000);
+ELSEIF(sal > 10000 AND sal < 20000) THEN
+call updateempsal(id,25000);
+ELSEIF(sal > 20000 AND sal < 50000) THEN
+call updateempsal(id,50000);
+END IF;
+FETCH cur INTO id,fname,lname,sal,dept,sex;
+END WHILE;
+CLOSE cur;
+END//
+
+DELIMITER ;
+call saladjest();
 </pre>
 
         </td>
