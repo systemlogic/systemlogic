@@ -7,7 +7,10 @@
     <tr><td><a href='/spring/mySQLInnerQuaries'><span>Inner Quaries</span></a></td></tr>
     <tr><td><a href='/spring/mySQLJoinsMath'><span>Joins/Functions</span></a></td></tr>
     <tr><td><a href='/spring/mySQLDeleteDropTruncate'><span>Delete/Truncate</span></a></td></tr>
-    <tr><td><a href='/spring/mySQLDeleteDropTruncate'><span>Views</span></a></td></tr>
     <tr><td><a href='/spring/mySQLProcedureFunction'><span>Procedure/Function</span></a></td></tr>
+    <tr><td><a href='/spring/mySQLView'><span>Views</span></a></td></tr>
+    <tr><td><a href='/spring/mySQLTriggers'><span>Triggers</span></a></td></tr>
+    <tr><td><a href='#'><span>Transaction</span></a></td></tr>
+    <tr><td><a href='#'><span>Administration</span></a></td></tr>
   </table>
 </ul>

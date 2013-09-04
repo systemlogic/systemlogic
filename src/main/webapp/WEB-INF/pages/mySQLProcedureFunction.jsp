@@ -156,9 +156,9 @@ END//
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS saladjest;
+DROP PROCEDURE IF EXISTS saladjust;
 DELIMITER //
-CREATE PROCEDURE saladjest()
+CREATE PROCEDURE saladjust()
 BEGIN
 DECLARE id INT DEFAULT 0;
 DECLARE sal INT;
@@ -181,9 +181,42 @@ CLOSE cur;
 END//
 
 DELIMITER ;
-call saladjest();
+call saladjust();
 </pre>
+<h2>Function</h2>
+<p>Upto this point we are directly playing with value passed, Let us see piece of code which will return value and 
+is called function.</p>
+<pre class="pres">
+CREATE FUNCTION helloWorld(S VARCHAR(10)) RETURNS VARCHAR(20) DETERMINISTIC
+RETURN CONCAT('Hello ', S,'!');
 
+select helloWorld('Pranshi') as 'Hello Guys';</pre>
+<p>Lets see some table example which uses helloWorld function.</p>
+<pre class="pres">
+ select helloWorld(firstName) as 'Hello Guys' from emp;</pre>
+ <p>So what can be make out from result is function is called for every row that is shown in result.</p>
+ <p>Let us write a function where salary will be increased if 12 % when employee is determised as female otherwise it 
+ will be increased by 10 %. Women always have benefit over mens. No Change in salary whose Sex is other then male and 
+ female.</p>
+ <pre class="pres">
+select * from emp;
+
+DELIMITER //
+CREATE FUNCTION increment(salary INT,sex VARCHAR(20)) RETURNS INT 
+BEGIN
+IF(sex = 'MALE') THEN
+RETURN salary*1.1;
+ELSEIF(sex = 'FEMALE') THEN
+RETURN salary*1.12;
+ELSE
+RETURN salary*1.0;
+END IF;
+END//
+DELIMITER ;
+
+UPDATE emp SET salary=increment(salary,sex);
+select * from emp;</pre>
+<p>Many of MySQL functons have already explained in Joins/Functions section.</p>
         </td>
         <%@ include file="rightPane.jsp" %>
     </tr>

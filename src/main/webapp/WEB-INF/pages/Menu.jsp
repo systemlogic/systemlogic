@@ -120,7 +120,7 @@
 			</div>
 
 		</div></li>
-	<li><a href="/spring/mySQL">My SQL</a>
+	<li><a href="#">SQL</a>
 		<div class="drop dropToLeft">
 			<div class="column" style="width: 200px; text-align: center;">
 				<img src="menu_assets/ddmenu/mySQL.jpg"
@@ -133,16 +133,26 @@
 				</a> <a href='/spring/mySQLInnerQuaries'><span>Inner Quaries</span>
 				</a> <a href='/spring/mySQLJoinsMath'><span>Joins/Functions</span>
 				</a> <a href='/spring/mySQLDeleteDropTruncate'><span>Delete/Truncate</span>
-				</a> <a href='/spring/mySQLProcedureFunction'><span>Views</span>
 				</a> <a href='/spring/mySQLProcedureFunction'><span>Procedure/Function</span>
-				
+				</a> <a href='/spring/mySQLView'><span>Views</span>
+				</a> 
+			</div>
+			<div class="column" >
+			</div>
+			<div class="column">
+				 <a href='/spring/mySQLTriggers'><span>Triggers</span>
+				</a> <a href='#'><span>Transaction</span>
+				</a> <a href='#'><span>Administration</span>
 				</a>
-
+			</div>
+			<div class="column" style="width: 200px; text-align: center;">
+				<img src="menu_assets/ddmenu/oracle.jpg"
+					style="width: 200px; height: 175px;" />
+			</div>
+			<div class="column">
+				<a href='/spring/oracleView'><span>View</span></a> 
 			</div>
 
 		</div></li>
-	<li><a href='#'><span>Contact Us</span> </a>
-	</li>
 </ul>
 </nav>
-<!-- </div> -->

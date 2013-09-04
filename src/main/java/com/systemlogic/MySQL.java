@@ -29,6 +29,15 @@ public class MySQL{
 	}@RequestMapping(value = "/mySQLProcedureFunction", method = RequestMethod.GET)
 	public String getmySQLProcedureFunction(ModelMap model) {
 		return "mySQLProcedureFunction";
+	}@RequestMapping(value = "/mySQLView", method = RequestMethod.GET)
+	public String getmySQLView(ModelMap model) {
+		return "mySQLView";
+	}@RequestMapping(value = "/oracleView", method = RequestMethod.GET)
+	public String getoracleView(ModelMap model) {
+		return "oracleView";
+	}@RequestMapping(value = "/mySQLTriggers", method = RequestMethod.GET)
+	public String getmySQLTriggers(ModelMap model) {
+		return "mySQLTriggers";
 	}
 	
 }
