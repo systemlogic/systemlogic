@@ -38,6 +38,9 @@ public class MySQL{
 	}@RequestMapping(value = "/mySQLTriggers", method = RequestMethod.GET)
 	public String getmySQLTriggers(ModelMap model) {
 		return "mySQLTriggers";
+	}@RequestMapping(value = "/mySQLTransaction", method = RequestMethod.GET)
+	public String getmySQLTransaction(ModelMap model) {
+		return "mySQLTransaction";
 	}
 	
 }
