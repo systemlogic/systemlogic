@@ -74,6 +74,33 @@ New transaction will start with default variable value.</p>
 <pre class="pres">
 ROLLBACK AND NO CHAIN;
 COMMIT AND NO CHAIN;</pre>
+<p><b>Savepoint : </b>One of the interesting thing with rollback transaction is it can be be rollback to some save point, 
+no need to rollback the whole transaction. To rollback the transaction wot certain point one has to defined savepoint.</p>
+<pre class="pres">
+START TRANSACTION;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT firstPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT secondPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT thirdPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+ROLLBACK TO SAVEPOINT secondPoint;
+</pre>
+<p>Similarly MySQL have <b>RELEASE SAVEPOINT</b> which delete specified savepoint from list of savepoints. Below piece of 
+code will give error at the end.</p>
+<pre class="pres">
+START TRANSACTION;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT firstPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT secondPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+SAVEPOINT thirdPoint;
+UPDATE emp SET salary=(salary-1000) WHERE EmpId=1000;
+RELEASE SAVEPOINT secondPoint;
+ROLLBACK TO SAVEPOINT secondPoint;
+</pre>
 <p><b>WITH CONSISTENT SNAPSHOT : </b>modifier starts a consistent read for storage engines that are capable of it. This applies 
 only to InnoDB. The consistent read operation that uses snapshot information to present query results based on a point in time, regardless of 
 changes performed by other transactions running at the same time. If queried data has been changed by another transaction, the 

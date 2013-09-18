@@ -78,9 +78,13 @@
 					style="width: 200px; height: 175px;" />
 			</div>
 			<div class="column">
-				<a href='#'>Adobe Flex</a> <a href='#'>Adobe AIR</a> <a href='#'>Adobe
-					Mobile</a> <a href='#'>Adobe Livecycle</a> <a href='#'>Cairngorm</a> <a
-					href='#'>Robohelp</a> <a href='#'>Day CQ</a>
+				<a href='/spring/AdobeFlex'>Adobe Flex</a> 
+				<a href='#'>Adobe AIR</a> 
+				<a href='/spring/AdobeFlexMobile'>Adobe Mobile</a> 
+				<a href='#'>Adobe Livecycle</a> 
+				<a href='#'>Cairngorm</a> 
+				<a href='#'>Robohelp</a> 
+				<a href='#'>Day CQ</a>
 			</div>
 
 		</div></li>
