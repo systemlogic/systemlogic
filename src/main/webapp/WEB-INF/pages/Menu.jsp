@@ -79,11 +79,9 @@
 			</div>
 			<div class="column">
 				<a href='/spring/AdobeFlex'>Adobe Flex</a> 
-				<a href='#'>Adobe AIR</a> 
-				<a href='/spring/AdobeFlexMobile'>Adobe Mobile</a> 
+				<a href='/spring/AdobeFlexMobile'>Adobe Mobile/AIR</a> 
 				<a href='/spring/AdobeLivecycle'>Adobe Livecycle</a> 
 				<a href='#'>Cairngorm</a> 
-				<a href='#'>Robohelp</a> 
 				<a href='#'>Day CQ</a>
 			</div>
 

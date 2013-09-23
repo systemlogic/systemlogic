@@ -99,6 +99,10 @@
   
 &lt;/s:View&gt;
 </pre>   	       
+
+<p>Adobe mobile is sort of desktop application which runs on mobile desktop. In order to run on windows/Linux/Mac OS one
+has to export it into AIR and then install it on.</p>
+<p><a href='http://systemlogic.systemlogic.cloudbees.net/images/mobile.air'><span>Download.</span></a></p>
 		</td>
         <%@ include file="rightPane.jsp" %>
     </tr>
