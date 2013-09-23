@@ -17,5 +17,8 @@ public class Adobe{
 	}@RequestMapping(value = "/AdobeFlexMobile", method = RequestMethod.GET)
 	public String getAdobeFlexMobile(ModelMap model) {
 		return "AdobeFlexMobile";
+	}@RequestMapping(value = "/AdobeLivecycle", method = RequestMethod.GET)
+	public String getAdobeLivecycle(ModelMap model) {
+		return "AdobeLivecycle";
 	}	
 }
