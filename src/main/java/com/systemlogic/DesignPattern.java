@@ -26,5 +26,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/bridge", method = RequestMethod.GET)
 	public String getbridge(ModelMap model) {
 		return "bridge";
-	}
+	}@RequestMapping(value = "/FactoryMethod", method = RequestMethod.GET)
+	public String getFactoryMethod(ModelMap model) {
+		return "FactoryMethod";
+	}	
 }

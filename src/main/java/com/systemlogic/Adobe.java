@@ -20,5 +20,5 @@ public class Adobe{
 	}@RequestMapping(value = "/AdobeLivecycle", method = RequestMethod.GET)
 	public String getAdobeLivecycle(ModelMap model) {
 		return "AdobeLivecycle";
-	}	
+	}
 }
