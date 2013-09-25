@@ -14,7 +14,7 @@
         <td align="left" bordercolor="c41200">
         	<h2>Factory Method Design Pattern</h2>
 <p>Factory is a place which will produce certain type of item based of item asked. We will simplify it by using ideological 
-name.</p>
+name of product class and creator class.</p>
 <pre class="pres">
 public abstract class Car {
 	abstract public int MaxSpeed(); 
@@ -32,7 +32,11 @@ class Fiesta extends Car{
 	}
 }
 
-class CarFactory{
+abstract class creatorCarFactory{
+	public abstract Car factoryMethod(String type);
+}
+
+class CarFactory extends creatorCarFactory{
 	public Car factoryMethod(String type){
 		Car car = null;
 		if(type.equals("Figo"))
@@ -43,9 +47,9 @@ class CarFactory{
 	}
 }
 
-class FactoryTest{
+class client{
 	public static void main(String...strings){
-		CarFactory carfact = new CarFactory();
+		creatorCarFactory carfact = new CarFactory();
 		Car car = carfact.factoryMethod("Figo");
 		System.out.println("Car max speed is" + car.MaxSpeed());
 	}

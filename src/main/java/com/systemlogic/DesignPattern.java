@@ -29,5 +29,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/FactoryMethod", method = RequestMethod.GET)
 	public String getFactoryMethod(ModelMap model) {
 		return "FactoryMethod";
+	}@RequestMapping(value = "/AbstractFactoryMethod", method = RequestMethod.GET)
+	public String getAbstractFactoryMethod(ModelMap model) {
+		return "AbstractFactoryMethod";
 	}	
 }
