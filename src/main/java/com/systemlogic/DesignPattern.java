@@ -38,5 +38,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/proxy", method = RequestMethod.GET)
 	public String getproxy(ModelMap model) {
 		return "proxy";
+	}@RequestMapping(value = "/flyWeight", method = RequestMethod.GET)
+	public String getflyWeight(ModelMap model) {
+		return "flyWeight";
 	}	
 }

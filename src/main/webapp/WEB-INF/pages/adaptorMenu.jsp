@@ -5,7 +5,7 @@
   	<tr><td><a href='/spring/bridge'><span>Bridge</span></a></td></tr>
   	<tr><td><a href='#'><span>Composite</span></a></td></tr>
   	<tr><td><a href='#'><span>Decorator</span></a></td></tr>
-  	<tr><td><a href='#'><span>Flyweight</span></a></td></tr>
+  	<tr><td><a href='/spring/flyWeight'><span>Flyweight</span></a></td></tr>
   	<tr><td><a href='/spring/proxy'><span>Proxy</span></a></td></tr>
   </table>
 </ul>
