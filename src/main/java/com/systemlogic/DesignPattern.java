@@ -35,5 +35,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/builderDP", method = RequestMethod.GET)
 	public String getbuilderDP(ModelMap model) {
 		return "builderDP";
+	}@RequestMapping(value = "/proxy", method = RequestMethod.GET)
+	public String getproxy(ModelMap model) {
+		return "proxy";
 	}	
 }
