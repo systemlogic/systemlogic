@@ -142,5 +142,9 @@ public class CoreJava {
 	public String getxjcOthers(ModelMap model) {
 		return "xjcOthers";
 	}
+	@RequestMapping(value = "/webservice", method = RequestMethod.GET)
+	public String getwebservice(ModelMap model) {
+		return "webservice";
+	}
 	
 }
