@@ -51,7 +51,7 @@
 						style="width: 200px; height: 175px;" />
 				</div>
 				<div class="column" style="width: 150px; text-align: center;">
-					<a href='#'>Hibernate</a>
+					<a href='/spring/hibernateFirstAnnotation'>Hibernate First</a>
 				</div>
 			</div>
 			<div>
