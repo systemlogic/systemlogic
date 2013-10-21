@@ -14,8 +14,15 @@
         <td align="left" bordercolor="c41200">
         	<h2>Web service</h2>
         	<p>Any request that can be serve over the web using http and SOAP protocol. There are few terms need 
-        	to know 1).Provider :  One who create service (Service Provider). 2). Consumer :  One who consume 
-        	the servie (Consumer)</p>
+        	to know. </p>
+        	<p>1).Provider :  One who create service (Service Provider).</p> 
+        	<p>2). Consumer :  One who consume the servie (Consumer).</p>
+        	<p>Some related to wsdl</p>
+        	<p>1).targetNamespace : Element belong to this namesapce</p>
+			<p>2).xmlschema : Element, complextype,int,string</p>
+			<p>3).xmlns : using a name space.</p>
+			<p>4).xmlns:pr : pr is namespace prefix</p>
+			<p>5).defautnamespace : Namespace without prefix and only one namespace is possible in any structure.</p>
         	<p>Let us understand it with some example.</p>
 <pre class="pres">
 public class Hello{
