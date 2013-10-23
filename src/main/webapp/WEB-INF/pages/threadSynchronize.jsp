@@ -94,6 +94,7 @@ no other thread can enter any other static synchronized method. So the output on
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

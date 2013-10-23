@@ -66,6 +66,7 @@ is already exists here is 120V supply and socket which can never be change for a
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

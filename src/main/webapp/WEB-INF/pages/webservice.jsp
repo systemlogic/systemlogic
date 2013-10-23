@@ -12,7 +12,7 @@
         </td>
         <td></td>
         <td align="left" bordercolor="c41200">
-        	<h2>Web service</h2>
+        	<h2>Web service(using jws)</h2>
         	<p>Any request that can be serve over the web using http and SOAP protocol. There are few terms need 
         	to know. </p>
         	<p>1).Provider :  One who create service (Service Provider).</p> 
@@ -201,6 +201,7 @@ public class client {
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

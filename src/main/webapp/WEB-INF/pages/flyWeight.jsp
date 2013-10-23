@@ -23,6 +23,7 @@ be drawn using same graphics then it will reduce the memory utilization consider
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

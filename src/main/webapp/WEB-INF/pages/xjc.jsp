@@ -150,12 +150,15 @@ xjc -p com.bank.account -d account.xsd
 Please dig into the folder, some java classes might be created with proper package structure if no error is thrown. Explore the java class file.</p>
 
 <p><a href='https://github.com/systemlogic/xjc/archive/master.zip'><span>Download this Example</span></a></p>
+<h3>NOTE : There some XSD which are having element with optional attribute. In such case above way won't work fine, One 
+has to create XSD first and then generate the classes.</h3>
 
 
 	    </td>
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

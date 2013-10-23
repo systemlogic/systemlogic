@@ -23,6 +23,7 @@
 
 	
 <%-- 	<h2>Movie Name : ${home}</h2>	 --%>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

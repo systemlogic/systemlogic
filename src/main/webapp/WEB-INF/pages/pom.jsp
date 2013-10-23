@@ -99,6 +99,7 @@ Downloaded: http://repo.maven.apache.org/maven2/org/springframework/spring-core/
         <%@ include file="rightPane.jsp" %>
     </tr>
 </table>
+<%@ include file="comments.jsp" %>
 <%@ include file="FooterLink.jsp" %>
 <%@ include file="Footer.jsp" %>
 </body>

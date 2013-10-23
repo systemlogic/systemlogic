@@ -146,5 +146,19 @@ public class CoreJava {
 	public String getwebservice(ModelMap model) {
 		return "webservice";
 	}
+	@RequestMapping(value = "/websWSDL2JAVA", method = RequestMethod.GET)
+	public String getwebsWSDL2JAVA(ModelMap model) {
+		return "websWSDL2JAVA";
+	}
+	@RequestMapping(value = "/websJAVA2WSDL", method = RequestMethod.GET)
+	public String getwebsJAVA2WSDL(ModelMap model) {
+		return "websJAVA2WSDL";
+	}
+	@RequestMapping(value = "/webserviceJAVA", method = RequestMethod.GET)
+	public String getwebserviceJAVA(ModelMap model) {
+		return "webserviceJAVA";
+	}
+	
+	
 	
 }
