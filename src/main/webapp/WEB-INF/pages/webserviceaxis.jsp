@@ -12,7 +12,7 @@
         </td>
         <td></td>
         <td align="left" bordercolor="c41200">
-        	<h2>Web service(using java)</h2>
+        	<h2>Web service(using Axis)</h2>
         	<p>Let us write webservice using pure java code. </p>
 <pre class="pres">
 package com.webservice;
