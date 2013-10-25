@@ -194,7 +194,7 @@ public class client {
 }</pre>
 
 <p><a href='https://github.com/systemlogic/FirstWebserviceClient/archive/master.zip'><span>Download Client code</span></a></p>
-
+<p><b>P.S. Host name used in above example is localhost:8090</b></p>
 
 
 	    </td>

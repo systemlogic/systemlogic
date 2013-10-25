@@ -60,7 +60,7 @@ jaxrpc.jar:log4j-1.2.8.jar:saaj.jar:wsdl4j-1.5.1.jar"</pre>
 <p><a href='https://github.com/systemlogic/javaWebService/archive/master.zip'><span>Download Server code</span></a></p>
 
 <p>Client code will be generated same way like in jws example.</p>
-
+<p><b>P.S. Host name used in above example is localhost:8090</b></p>
 	    </td>
         <%@ include file="rightPane.jsp" %>
     </tr>

@@ -46,6 +46,7 @@ java org.apache.axis.client.AdminClient deploy.wsdd          //if host name is l
 OR
 java org.apache.axis.client.AdminClient -l http://HostServerName/axis/servlet/AxisServlet deploy.wsdd</pre>
 <p>Now one has to write main method to access the deployed service and method exposed on the URL.</p>
+<p><b>P.S. Host name used in above example is localhost:8090</b></p>
 	    </td>
         <%@ include file="rightPane.jsp" %>
     </tr>

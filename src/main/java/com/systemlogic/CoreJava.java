@@ -162,6 +162,13 @@ public class CoreJava {
 	public String getwebsMTOM(ModelMap model) {
 		return "websMTOM";
 	}
+	@RequestMapping(value = "/websAsync", method = RequestMethod.GET)
+	public String getwebsAsync(ModelMap model) {
+		return "websAsync";
+	}@RequestMapping(value = "/websOneway", method = RequestMethod.GET)
+	public String getwebsOneway(ModelMap model) {
+		return "websOneway";
+	}
 	
 	
 }
