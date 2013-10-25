@@ -5,6 +5,7 @@
 	<tr><td><a href='/spring/webserviceaxis'><span>Axis webservice</span></a></td></tr>
 	<tr><td><a href='/spring/webserviceJava'><span>Java webservice</span></a></td></tr>
 	<tr><td><a href='/spring/websJDK'><span>jdk webservice</span></a></td></tr>
+	<tr><td><a href='/spring/websMTOM'><span>MTOM</span></a></td></tr>
   </table>
 </ul>
 </div>

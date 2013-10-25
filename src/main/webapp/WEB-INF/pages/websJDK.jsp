@@ -77,7 +77,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4"&gt;
         url-pattern='/Hello'/&gt;
 &lt;/endpoints&gt;</pre>
 
-<p><a href='https://github.com/systemlogic/wsimportWS/archive/master.zip'><span>Server Side code</span></a></p>
+<p><a href='https://github.com/systemlogic/wsimportWS/archive/master.zip'><span>Download Server code</span></a></p>
 <p>Once you are able to see the WSDL on browser, client code can be generated using wsimport command</p>
 <pre class="pres">wsimport -d . -p com.systemlogic -keep http://localhost:8090/wsimportWS/Hello?wsdl</pre>
 <p>Client code OR artifact can be found in com.systemlogic folder. Copy the whole com folder and placed it in the 

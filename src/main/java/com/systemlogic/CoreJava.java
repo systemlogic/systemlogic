@@ -158,7 +158,10 @@ public class CoreJava {
 	public String getwebserviceaxis(ModelMap model) {
 		return "webserviceaxis";
 	}
-	
+	@RequestMapping(value = "/websMTOM", method = RequestMethod.GET)
+	public String getwebsMTOM(ModelMap model) {
+		return "websMTOM";
+	}
 	
 	
 }
