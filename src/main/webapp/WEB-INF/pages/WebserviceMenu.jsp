@@ -8,6 +8,7 @@
 	<tr><td><a href='/spring/websMTOM'><span>MTOM</span></a></td></tr>
 	<tr><td><a href='/spring/websOneway'><span>One Way</span></a></td></tr>
 	<tr><td><a href='/spring/websAsync'><span>Asynchronous Call</span></a></td></tr>
+	<tr><td><a href='/spring/websSecurity'><span>Security</span></a></td></tr>
   </table>
 </ul>
 </div>

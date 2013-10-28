@@ -169,6 +169,10 @@ public class CoreJava {
 	public String getwebsOneway(ModelMap model) {
 		return "websOneway";
 	}
+	@RequestMapping(value = "/websSecurity", method = RequestMethod.GET)
+	public String getwebsSecurity(ModelMap model) {
+		return "websSecurity";
+	}
 	
 	
 }
