@@ -173,6 +173,10 @@ public class CoreJava {
 	public String getwebsSecurity(ModelMap model) {
 		return "websSecurity";
 	}
+	@RequestMapping(value = "/Reflection", method = RequestMethod.GET)
+	public String getReflection(ModelMap model) {
+		return "Reflection";
+	}
 	
 	
 }
