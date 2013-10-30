@@ -20,14 +20,6 @@
 			modifier can be examine.</p>
 <pre class="pres">package com;
 public class HelloWorld extends Hello{
-	HelloWorld(){}
-	HelloWorld(int a){
-		super();
-		public_int_variable = a;
-	}
-	HelloWorld(float b){
-		protected_float_varibale = b;
-	}
 	double default_variable;
 	public int public_int_variable ;
 	@SuppressWarnings("unused")
@@ -35,11 +27,22 @@ public class HelloWorld extends Hello{
 	protected float protected_float_varibale ;
 	static String static_string_variable;
 	final String final_String_variable="";
+	
+	HelloWorld(){
+		super();
+	}
+	public HelloWorld(int a){
+		super(a);
+		public_int_variable = a;
+	}
+	HelloWorld(float b){
+		protected_float_varibale = b;
+	}
 	public String hello(String str){
 		return "Hello "+ str + "!!!";
 	}
 	protected int increment(int variable){
-		return variable + 20;
+		return public_int_variable + variable;
 	}
 	@SuppressWarnings("unused")
 	private String increment(String variable){
@@ -48,8 +51,14 @@ public class HelloWorld extends Hello{
 }
 class Hello{
 	protected int super_int_variable;
+	public Hello(){
+		super_int_variable = 0;
+	}
+	public Hello(int value){
+		super_int_variable = value;
+	}
 	public long increment(long variable){
-		return variable + 20;
+		return variable + super_int_variable;
 	}
 }</pre>
 <p>The above class we are going to examine using our following main program.</p>
@@ -60,21 +69,21 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class TestClass {
+public class ClassMethodField {
 	Class&lt;?&gt; cls ;
-	TestClass(Class&lt;?&gt; cls){
+	ClassMethodField(Class&lt;?&gt; cls){
 		this.cls = cls; 
 	}
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		
-		TestClass obj2 = new TestClass(HelloWorld.class);
-		TestClass obj3 = new TestClass(Class.forName("com.HelloWorld"));
+		ClassMethodField obj2 = new ClassMethodField(HelloWorld.class);
+		ClassMethodField obj3 = new ClassMethodField(Class.forName("com.HelloWorld"));
 		
-		TestClass[] clsArr =  {obj2}; //{obj2,obj3};
+		ClassMethodField[] clsArr =  {obj2};
 		
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Declared Fields-------------------");
 			Field[] field = obj.cls.getDeclaredFields();
 			for(Field temp_constructor :field){
@@ -82,7 +91,7 @@ public class TestClass {
 				
 			}
 		}
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Fields----------------------------");
 			Field[] ff = obj.cls.getFields();
 			for(Field field :ff){
@@ -91,7 +100,7 @@ public class TestClass {
 			}
 		}
 		
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Declared Fields and Type----------");
 			Field[] ff = obj.cls.getDeclaredFields();
 			for(Field field :ff){
@@ -102,7 +111,7 @@ public class TestClass {
 		}
 
 		
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Constructor-----------------------");
 			Constructor[] ff = obj.cls.getDeclaredConstructors();
 			for(Constructor&lt;?&gt; field :ff){
@@ -110,7 +119,7 @@ public class TestClass {
 				
 			}
 		}
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------All methods-----------------------");
 			Method[] ff = obj.cls.getMethods();
 			for(Method field :ff){
@@ -119,7 +128,7 @@ public class TestClass {
 			}
 		}
 		
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Class methods---------------------");
 			Method[] ff = obj.cls.getDeclaredMethods();
 			for(Method field :ff){
@@ -127,12 +136,12 @@ public class TestClass {
 				
 			}
 		}
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Super Class-----------------------");
 			Class&lt;?&gt; ff = obj.cls.getSuperclass();
 			System.out.println("Modifier :" + ff.getModifiers() + " Class Name :" + ff.getName() );
 		}
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Super Class Constructor-------------");
 			Constructor[] ff = obj.cls.getSuperclass().getDeclaredConstructors();
 			for(Constructor&lt;?&gt; field :ff){
@@ -141,7 +150,7 @@ public class TestClass {
 			}
 		}
 		
-		for(TestClass obj : clsArr){
+		for(ClassMethodField obj : clsArr){
 			System.out.println("-------------------Class methods---------------------");
 			Method[] ff = obj.cls.getSuperclass().getDeclaredMethods();
 			for(Method field :ff){

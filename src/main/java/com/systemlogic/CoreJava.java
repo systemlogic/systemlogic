@@ -177,6 +177,13 @@ public class CoreJava {
 	public String getReflection(ModelMap model) {
 		return "Reflection";
 	}
-	
+	@RequestMapping(value = "/ReflectionInvoke", method = RequestMethod.GET)
+	public String getReflectionInvoke(ModelMap model) {
+		return "ReflectionInvoke";
+	}
+	@RequestMapping(value = "/RefPrivateFieldMethod", method = RequestMethod.GET)
+	public String getRefPrivateFieldMethod(ModelMap model) {
+		return "RefPrivateFieldMethod";
+	}
 	
 }
