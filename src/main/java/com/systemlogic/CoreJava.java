@@ -185,5 +185,8 @@ public class CoreJava {
 	public String getRefPrivateFieldMethod(ModelMap model) {
 		return "RefPrivateFieldMethod";
 	}
-	
+	@RequestMapping(value = "/RefSynthetic", method = RequestMethod.GET)
+	public String getRefSynthetic(ModelMap model) {
+		return "RefSynthetic";
+	}
 }
