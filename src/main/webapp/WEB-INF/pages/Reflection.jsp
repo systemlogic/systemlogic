@@ -116,14 +116,23 @@ public class ClassMethodField {
 			Constructor[] ff = obj.cls.getDeclaredConstructors();
 			for(Constructor&lt;?&gt; field :ff){
 				System.out.println("Constructor :" + field.getName());
-				
+				System.out.print("Parameters : ") ;
+				for (Type gpType : field.getParameterTypes() ){
+					System.out.print(gpType.toString() + " ");
+				}
+				System.out.println( );
 			}
 		}
 		for(ClassMethodField obj : clsArr){
-			System.out.println("-------------------All methods-----------------------");
+			System.out.println("-------------------All methods and its parameters------");
 			Method[] ff = obj.cls.getMethods();
 			for(Method field :ff){
 				System.out.println("Method :" + field.getReturnType() +" " +field.getName());
+				System.out.print("Parameters : ") ;
+				for (Type gpType : field.getParameterTypes() ){
+					System.out.print(gpType.toString() + " ");
+				}
+				System.out.println( );
 				
 			}
 		}
@@ -193,21 +202,35 @@ Modifier :4 for variable protected_float_varibale
 Modifier :8 for variable static_string_variable
 Modifier :16 for variable final_String_variable
 -------------------Constructor-----------------------
-Constructor :com.HelloWorld
-Constructor :com.HelloWorld
-Constructor :com.HelloWorld
--------------------All methods-----------------------
+Constructor :synthetic.HelloWorld
+Parameters : 
+Constructor :synthetic.HelloWorld
+Parameters : int 
+Constructor :synthetic.HelloWorld
+Parameters : float
+-------------------All methods and its parameters------
 Method :long increment
+Parameters : long 
 Method :class java.lang.String hello
+Parameters : class java.lang.String 
 Method :void wait
+Parameters : long 
 Method :void wait
+Parameters : long int 
 Method :void wait
+Parameters : 
 Method :boolean equals
+Parameters : class java.lang.Object 
 Method :class java.lang.String toString
+Parameters : 
 Method :int hashCode
+Parameters : 
 Method :class java.lang.Class getClass
+Parameters : 
 Method :void notify
+Parameters : 
 Method :void notifyAll
+Parameters : 
 -------------------Class methods---------------------
 Method :int increment
 Method :class java.lang.String increment
