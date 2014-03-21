@@ -189,4 +189,8 @@ public class CoreJava {
 	public String getRefSynthetic(ModelMap model) {
 		return "RefSynthetic";
 	}
+	@RequestMapping(value = "/annotationMethod", method = RequestMethod.GET)
+	public String getAnnotationMethod(ModelMap model) {
+		return "annotationMethod";
+	}
 }
