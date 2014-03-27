@@ -193,4 +193,8 @@ public class CoreJava {
 	public String getAnnotationMethod(ModelMap model) {
 		return "annotationMethod";
 	}
+	@RequestMapping(value = "/annotationBuiltIn", method = RequestMethod.GET)
+	public String getannotationBuildIn(ModelMap model) {
+		return "annotationBuiltIn";
+	}
 }
