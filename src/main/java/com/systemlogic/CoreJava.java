@@ -197,4 +197,12 @@ public class CoreJava {
 	public String getannotationBuildIn(ModelMap model) {
 		return "annotationBuiltIn";
 	}
+	@RequestMapping(value = "/Concurrency", method = RequestMethod.GET)
+	public String getConcurrency(ModelMap model) {
+		return "Concurrency";
+	}
+	@RequestMapping(value = "/Lock", method = RequestMethod.GET)
+	public String getLock(ModelMap model) {
+		return "Lock";
+	}
 }
