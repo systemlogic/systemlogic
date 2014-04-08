@@ -41,5 +41,8 @@ public class DesignPattern {
 	}@RequestMapping(value = "/flyWeight", method = RequestMethod.GET)
 	public String getflyWeight(ModelMap model) {
 		return "flyWeight";
+	}@RequestMapping(value = "/composite", method = RequestMethod.GET)
+	public String getcomposite(ModelMap model) {
+		return "composite";
 	}	
 }
