@@ -98,10 +98,18 @@ class Notifier implements Runnable {
         	 <h2>wait, notifyAll</h2>
         	 <p>When multiple thread try to execute synchronized block of wait(), notifier thread uses notifyAll method of the object. </p>
 <pre class="pres">
-import java.util.Date;
+
+
+		import java.util.Date;
 
 public class ThreadTest{
 	public static void main(String[] args) {
+try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+
 		Message message = new Message("Howdy");
 		Waiter waiter = new Waiter(message);
 		Thread waiterThread = new Thread(waiter, "waiter Thread-1");
@@ -115,6 +123,8 @@ public class ThreadTest{
 		Notifier notifier = new Notifier(message);
 		Thread notifierThread = new Thread(notifier, "notifierThread");
 		notifierThread.start();
+
+		
 	}
 }
 
@@ -140,10 +150,15 @@ class Waiter implements Runnable {
 	public void run() {
 		synchronized (message) {
 			try {
+			
+				Thread.sleep(2000);
 				System.out.println(Thread.currentThread().getName() + " is waiting for the notifier at " + new Date());
 				message.wait();
 				System.out.println(Thread.currentThread().getName() + " is done waiting at " + new Date());
 				System.out.println(Thread.currentThread().getName() + " got the message: " + message.getText());
+
+				Thread.sleep(2000);
+			
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -159,13 +174,13 @@ class Notifier implements Runnable {
 	public void run() {
 		System.out.println("Notifier is sleeping for 3 seconds at " + new Date());
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
 		synchronized (message) {
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
@@ -174,7 +189,13 @@ class Notifier implements Runnable {
 			message.notifyAll();
 		}
 	}
-}</pre>
+}
+
+
+
+
+</pre>
+ <img src="/images/notifyall.png">
 <p>Order of output is not pridictable.</p>
 	    </td>
         <%@ include file="rightPane.jsp" %>
