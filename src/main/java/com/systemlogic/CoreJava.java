@@ -189,4 +189,36 @@ public class CoreJava {
 	public String getRefSynthetic(ModelMap model) {
 		return "RefSynthetic";
 	}
+	@RequestMapping(value = "/annotationMethod", method = RequestMethod.GET)
+	public String getAnnotationMethod(ModelMap model) {
+		return "annotationMethod";
+	}
+	@RequestMapping(value = "/annotationBuiltIn", method = RequestMethod.GET)
+	public String getannotationBuildIn(ModelMap model) {
+		return "annotationBuiltIn";
+	}
+	@RequestMapping(value = "/Concurrency", method = RequestMethod.GET)
+	public String getConcurrency(ModelMap model) {
+		return "Concurrency";
+	}
+	@RequestMapping(value = "/Lock", method = RequestMethod.GET)
+	public String getLock(ModelMap model) {
+		return "Lock";
+	}
+	@RequestMapping(value = "/Executors", method = RequestMethod.GET)
+	public String getExecutors(ModelMap model) {
+		return "Executors";
+	}
+	@RequestMapping(value = "/Concollection", method = RequestMethod.GET)
+	public String getConcollection(ModelMap model) {
+		return "Concollection";
+	}
+	@RequestMapping(value = "/AtomicVariable", method = RequestMethod.GET)
+	public String getAtomicVariable(ModelMap model) {
+		return "AtomicVariable";
+	}
+	@RequestMapping(value = "/Random", method = RequestMethod.GET)
+	public String getRandom(ModelMap model) {
+		return "Random";
+	}
 }

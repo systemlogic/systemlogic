@@ -50,6 +50,17 @@
 		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
 	</context-param>
 
+	<servlet>
+		<servlet-name>cd</servlet-name>
+		<servlet-class>com.systemlogic.crossdomain</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cd</servlet-name>
+		<url-pattern>/crossdomain.xml</url-pattern>
+	</servlet-mapping>
+
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>

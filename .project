@@ -3,6 +3,7 @@
 	<name>systemlogic</name>
 	<comment>Systemlogic Technologies</comment>
 	<projects>
+		<project>JavaProject</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

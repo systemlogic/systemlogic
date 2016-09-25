@@ -8,7 +8,7 @@
 <table>
  <tr >
         <td valign="top" height="10px" width="222">
-            <%@ include file="adaptorMenu.jsp" %>
+            <%@ include file="structuralMenu.jsp" %>
         </td>
         <td></td>
         <td align="left" bordercolor="c41200">
