@@ -1,0 +1,10 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+
+before_install:
+  - pwd
+  - mvn clean install
