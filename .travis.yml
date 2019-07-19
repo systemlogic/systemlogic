@@ -12,6 +12,5 @@ before_install:
   - sudo docker login -u=harshkarora -p=Pranshi@03
   - echo "Docker Hub credentials are working"
   - docker pull python:2.7-slim-jessie
-
 script:
   - docker ps -a
